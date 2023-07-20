@@ -53,14 +53,72 @@
 			</view>	
 		</view>
 		<view style="height: 120rpx;"></view>
-		<view class="msg"></view>
+		<view class="msg">
+			<view>			
+				<text class="iconfont tongzhi">&#xe606;</text>
+			</view>
+			<view style="margin-left: 18rpx;">
+				<text>心理咨询如何起作用？</text>
+			</view>
+		</view>
 		<view class="search">
 			<view>
 				<button plain class="search_btn">绑定手机号</button>
 			</view>
 			<view>
-				<text class="iconfont">&#xe60d;</text>
+				<!-- <uni-easyinput prefixIcon="search" placeholder="前往搜索"></uni-easyinput> -->
+				<!-- <text class="iconfont">&#xe60d;</text> -->
 				<input class="search_input" type="text" value="" placeholder="前往搜索" />
+			</view>
+		</view>
+		<view class="nav_list">
+			<view class="nav_box">
+				<view class="nav_box_content" style="background-color: #FFD590;">
+					<text class="iconfont nav_icon">&#xe74f;</text>
+				</view>
+				<view>
+					<text>在线测评</text>
+				</view>
+			</view>
+			<view class="nav_box">
+				<view class="nav_box_content" style="background-color: #6ADFFB;">
+					<text class="iconfont nav_icon">&#xe638;</text>
+				</view>
+				<view>
+					<text>心事问答</text>
+				</view>
+			</view>
+			<view class="nav_box">
+				<view class="nav_box_content" style="background-color: #60F1DD;">
+					<text class="iconfont nav_icon">&#xe6a1;</text>
+				</view>
+				<view>
+					<text>心理咨询</text>
+				</view>
+			</view>
+			<view class="nav_box">
+				<view class="nav_box_content" style="background-color: #FEAAA9;">
+					<text class="iconfont nav_icon">&#xe602;</text>
+				</view>
+				<view>
+					<text>课程与服务</text>
+				</view>
+			</view>
+			<view class="nav_box">
+				<view class="nav_box_content" style="background-color: #DBBEF9;">
+					<text class="iconfont nav_icon">&#xe651;</text>
+				</view>
+				<view>
+					<text>趣味沙龙</text>
+				</view>
+			</view>
+			<view class="nav_box">
+				<view class="nav_box_content" style="background-color: #8DE4FB;">
+					<text class="iconfont nav_icon">&#xe654;</text>
+				</view>
+				<view>
+					<text>心事分享</text>
+				</view>
 			</view>
 		</view>
 	</view>
@@ -174,7 +232,15 @@
 	}	
 	.msg{
 		height: 80rpx;
-		background-color: #ddd;
+		line-height: 80rpx;
+		display: flex;
+		margin-left: 30rpx;
+		margin-bottom: 15rpx;
+		font-size: 12px;
+		.tongzhi{
+			font-size: 28px;
+			color: #61B3A3;
+		}
 	}
 	.search{
 		height: 60rpx;
@@ -191,19 +257,48 @@
 			border-radius: 50rpx;
 			border: 2px solid #ABABAB;
 		}
-		.uni-icon{
-			
-		}
 		.search_input{
 			height: 60rpx;
 			width: 460rpx;
 			margin-left: 20rpx;
-			padding-left: 50rpx;
+			padding-left: 100rpx;
+			color: #969696;
 			font-size: 12px;
 			box-sizing: border-box;
 			line-height: 60rpx;
 			background-color: #F2F2F2;
+			background-image: url('@/static/images/home/search.png');
+			background-size: 40rpx;
+			background-position: 8% 60%;
+			background-repeat: no-repeat;
 			border-radius: 50rpx;
+		}
+	}
+	.nav_list{
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-evenly;
+		text-align: center;
+		.nav_box{
+			width: 30%;
+			height: 200rpx;
+			// border: 1px solid gray;
+			// background-color: #ddd;
+			margin-top: 30rpx;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-evenly;
+			align-items: center;
+			.nav_box_content{
+				width: 130rpx;
+				height: 130rpx;
+				line-height: 130rpx;
+				border-radius: 50%;
+				.nav_icon{
+					font-size: 80rpx;
+					color: white;
+				}
+			}
 		}
 	}
 }
