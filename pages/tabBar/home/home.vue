@@ -121,6 +121,68 @@
 				</view>
 			</view>
 		</view>
+		<view class="swiper_container">
+			<swiper class="swiper" 
+				:circular="false" 
+				indicator-dots 
+				:autoplay="true" 
+				:interval="3000"
+				:duration="400">
+				<swiper-item>
+					<view class="swiper-item">A</view>
+				</swiper-item>
+				<swiper-item>
+					<view class="swiper-item">B</view>
+				</swiper-item>
+				<swiper-item>
+					<view class="swiper-item">C</view>
+				</swiper-item>
+				<swiper-item>
+					<view class="swiper-item">D</view>
+				</swiper-item>
+			</swiper>
+		</view>
+		<ul class="area_list">
+			<li v-for="(area,index) in areaList" 
+				:key="area.id"
+				@click="goArea(index)"
+				:class="areaIndex==index ? 'li-active' : ''"
+				>
+					{{ area.name }}
+			</li>
+		</ul>
+		
+		<view class="filter">
+			<view class="filter-item">
+				<text>疑惑</text>
+				<text class="iconfont" style="font-size: 6px;color: #aaa;">&#xe604;</text>
+				<text v-if="false" class="iconfont" style="font-size: 6px;color: #aaa;">&#xe605;</text>
+			</view>
+			<view class="filter-item">
+				<text>疑惑</text>
+				<text class="iconfont" style="font-size: 6px;color: #aaa;">&#xe604;</text>
+				<text v-if="false" class="iconfont" style="font-size: 6px;color: #aaa;">&#xe605;</text>
+			</view>
+			<view class="filter-item">
+				<text>疑惑</text>
+				<text class="iconfont" style="font-size: 6px;color: #aaa;">&#xe604;</text>
+				<text v-if="false" class="iconfont" style="font-size: 6px;color: #aaa;">&#xe605;</text>
+			</view>
+			<view class="filter-item">
+				<text>疑惑</text>
+				<text class="iconfont" style="font-size: 6px;color: #aaa;">&#xe604;</text>
+				<text v-if="false" class="iconfont" style="font-size: 6px;color: #aaa;">&#xe605;</text>
+			</view>
+			<view class="filter-item">
+				<text>疑惑</text>
+				<text class="iconfont" style="font-size: 6px;color: #aaa;">&#xe604;</text>
+				<text v-if="false" class="iconfont" style="font-size: 6px;color: #aaa;">&#xe605;</text>
+			</view>
+		</view>
+		
+		<view style="height: 100rpx;"></view>
+		<consultant />
+		<consultant />
 	</view>
 </template>
 
@@ -128,11 +190,24 @@
 	export default {
 		data() {
 			return {
-				
+				areaList:[
+					{id:1,name:'全国'},
+					{id:2,name:'深圳'},
+					{id:3,name:'广州'},
+					{id:4,name:'哈尔滨'},
+					{id:5,name:'内蒙古'},
+					{id:6,name:'武汉'},
+					{id:7,name:'成都'},
+					{id:8,name:'重庆'},
+					{id:9,name:'大理'}
+				],
+				areaIndex:0
 			}
 		},
 		methods: {
-			
+			goArea(index){
+				this.areaIndex = index
+			}
 		}
 	}
 </script>
@@ -192,7 +267,7 @@
 			}
 		}
 		.header_content{
-			margin-left: 1.5%;
+			margin: 0 auto;
 			height: 300rpx;
 			width: 97%;
 			background-color: white;
@@ -206,7 +281,7 @@
 				position: relative;
 				width: 92%;
 				height: 165rpx;
-				margin-left: 4%;
+				margin: 0 auto;
 				margin-top: 30rpx;
 				border-radius: 20rpx 20rpx 0 0;
 				background-color: #FFF0D9;
@@ -252,7 +327,7 @@
 			font-size: 12px;
 			color: #969696;
 			background-color: #F2F2F2;
-			line-height: 60rpx;
+			line-height: 50rpx;
 			margin-left: 50rpx;
 			border-radius: 50rpx;
 			border: 2px solid #ABABAB;
@@ -299,6 +374,54 @@
 					color: white;
 				}
 			}
+		}
+	}
+	.swiper_container{
+		width: 95%;
+		margin: 0 auto;
+		margin-top: 30rpx;
+		.swiper{
+			height: 350rpx;
+			text-align: center;
+			background-color: #bfc;
+			.swiper-item{
+				line-height: 350rpx;
+			}
+		}
+	}
+	.area_list{
+		padding: 0;
+		margin: 0;
+		list-style: none;
+		height: 100rpx;
+		width: 95%;
+		margin: 0 auto;
+		margin-top: 40rpx;
+		display: flex;
+		overflow: auto;
+		align-items: center;
+		text-align: center;
+		&::-webkit-scrollbar {
+			display: none;
+		}
+		li{
+			flex-shrink: 0;
+			width: 120rpx;
+			color: #888;
+		}
+		.li-active{
+			font-size: 20px;
+			color: #333;
+		}
+	}
+	.filter{
+		width: 95%;
+		margin: 0 auto;
+		display: flex;
+		justify-content: space-around;
+		.filter-item{
+			font-size: 14px;
+			color: #555;
 		}
 	}
 }

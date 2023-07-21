@@ -6,36 +6,44 @@
 				"navigationBarTitleText": "",
 				"enablePullDownRefresh": false
 			}
-		}, 
+		},
 		{
 			"path": "pages/tabBar/queAndAns/queAndAns",
 			"style": {
 				"navigationBarTitleText": "",
 				"enablePullDownRefresh": false
 			}
-		}, 
+		},
 		{
 			"path": "pages/tabBar/seek/seek",
 			"style": {
 				"navigationBarTitleText": "",
 				"enablePullDownRefresh": false
 			}
-		}, 
+		},
 		{
 			"path": "pages/tabBar/course/course",
 			"style": {
 				"navigationBarTitleText": "",
 				"enablePullDownRefresh": false
 			}
-		}, 
+		},
 		{
 			"path": "pages/tabBar/user/user",
 			"style": {
 				"navigationBarTitleText": "",
 				"enablePullDownRefresh": false
 			}
+		},
+		{
+			"path" : "components/consultant/consultant",
+			"style" :                                                                                    
+			{
+					"navigationBarTitleText": "",
+					"enablePullDownRefresh": false
+			}
 		}
-	],
+    ],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",
 		"navigationBarTitleText": "心事盒一让孤独的灵魂有处可栖",
@@ -48,8 +56,7 @@
 		"selectedColor": "#F1DDF1",
 		"borderStyle": "white",
 		"backgroundColor": "#ffffff",
-		"list": [
-			{
+		"list": [{
 				"pagePath": "pages/tabBar/home/home",
 				"iconPath": "static/images/icon/tabBar/home.png",
 				"selectedIconPath": "static/images/icon/tabBar/home-selected.png",

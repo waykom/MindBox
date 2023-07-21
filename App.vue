@@ -27,4 +27,31 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+/* #ifdef APP-PLUS  || H5*/
+uni-swiper .uni-swiper-dot {
+	width: 60rpx;
+	height: 4rpx;	
+	border-radius: 6rpx;
+}
+uni-swiper .uni-swiper-dot-active {
+	width: 60rpx;
+	border-radius: 6rpx;
+}
+
+/* #endif */
+
+/* #ifdef MP-WEIXIN */
+wx-swiper .wx-swiper-dot {
+	width: 60rpx;
+	height: 4rpx;
+	border-radius: 6rpx;
+}
+
+wx-swiper .wx-swiper-dot-active {
+	width: 60rpx;
+	height: 4rpx;
+	border-radius: 6rpx;
+}
+/* #endif */
 </style>
