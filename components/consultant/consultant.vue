@@ -6,8 +6,12 @@
 		<view class="right-content">
 			<view class="right-msg">
 				<view class="name-grade">
-					<text class="name">张三</text>
-					<text class="grade">初级咨询师</text>
+					<view>
+						<text class="name">张三</text>
+					</view>
+					<view>
+						<text class="grade">初级咨询师</text>
+					</view>
 				</view>
 				<view class="grade">
 					<text>国家一级心理咨询师</text>
@@ -21,10 +25,10 @@
 			</view>
 			<view class="right-btn">
 				<view>
-					<button plain class="btn-a">预约</button>
+					<button plain class="btn-a" hover-class="none">预约</button>
 				</view>
 				<view>
-					<button plain class="btn-b">提问</button>
+					<button plain class="btn-b" hover-class="none">提问</button>
 				</view>
 			</view>
 		</view>
@@ -47,7 +51,6 @@
 	height: 350rpx;
 	margin: 0 auto;
 	margin-top: 50rpx;
-	box-sizing: border-box;
 	border-radius: 20rpx;
 	box-shadow: 0px 0px 10px #ccc;
 	display: flex;
@@ -69,10 +72,24 @@
 		.right-msg{
 			display: flex;
 			flex-direction: column;
+			font-size: 14px;
 			.name-grade{
+				display: flex;
+				align-items: center;
+				margin-bottom: 10rpx;
 				.name{
-					font-size: 28px;
+					font-size: 18px;
+					font-weight: bold;
+					margin-right: 40rpx;
 				}
+			}
+			.grade{
+			}
+			.great{
+				color: #666;
+			}
+			.experience{
+				color: #666;
 			}
 		}
 		.right-btn{
@@ -85,6 +102,11 @@
 				border-radius: 50rpx;
 				border: 2px solid #079D6C;
 				margin-right: 20rpx;
+				font-size: 14px;
+			}
+			.btn-b{
+				background-color: #079D6C;
+				color: white;
 			}
 		}
 	}

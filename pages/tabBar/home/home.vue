@@ -142,47 +142,10 @@
 				</swiper-item>
 			</swiper>
 		</view>
-		<ul class="area_list">
-			<li v-for="(area,index) in areaList" 
-				:key="area.id"
-				@click="goArea(index)"
-				:class="areaIndex==index ? 'li-active' : ''"
-				>
-					{{ area.name }}
-			</li>
-		</ul>
-		
-		<view class="filter">
-			<view class="filter-item">
-				<text>疑惑</text>
-				<text class="iconfont" style="font-size: 6px;color: #aaa;">&#xe604;</text>
-				<text v-if="false" class="iconfont" style="font-size: 6px;color: #aaa;">&#xe605;</text>
-			</view>
-			<view class="filter-item">
-				<text>疑惑</text>
-				<text class="iconfont" style="font-size: 6px;color: #aaa;">&#xe604;</text>
-				<text v-if="false" class="iconfont" style="font-size: 6px;color: #aaa;">&#xe605;</text>
-			</view>
-			<view class="filter-item">
-				<text>疑惑</text>
-				<text class="iconfont" style="font-size: 6px;color: #aaa;">&#xe604;</text>
-				<text v-if="false" class="iconfont" style="font-size: 6px;color: #aaa;">&#xe605;</text>
-			</view>
-			<view class="filter-item">
-				<text>疑惑</text>
-				<text class="iconfont" style="font-size: 6px;color: #aaa;">&#xe604;</text>
-				<text v-if="false" class="iconfont" style="font-size: 6px;color: #aaa;">&#xe605;</text>
-			</view>
-			<view class="filter-item">
-				<text>疑惑</text>
-				<text class="iconfont" style="font-size: 6px;color: #aaa;">&#xe604;</text>
-				<text v-if="false" class="iconfont" style="font-size: 6px;color: #aaa;">&#xe605;</text>
-			</view>
-		</view>
-		
-		<view style="height: 100rpx;"></view>
-		<consultant />
-		<consultant />
+
+		<home-filter></home-filter>
+		<!-- <view style="height: 100rpx;"></view> -->
+		<view style="height: 50rpx;"></view>
 	</view>
 </template>
 
@@ -190,24 +153,11 @@
 	export default {
 		data() {
 			return {
-				areaList:[
-					{id:1,name:'全国'},
-					{id:2,name:'深圳'},
-					{id:3,name:'广州'},
-					{id:4,name:'哈尔滨'},
-					{id:5,name:'内蒙古'},
-					{id:6,name:'武汉'},
-					{id:7,name:'成都'},
-					{id:8,name:'重庆'},
-					{id:9,name:'大理'}
-				],
-				areaIndex:0
+
 			}
 		},
 		methods: {
-			goArea(index){
-				this.areaIndex = index
-			}
+
 		}
 	}
 </script>
@@ -389,40 +339,6 @@
 			}
 		}
 	}
-	.area_list{
-		padding: 0;
-		margin: 0;
-		list-style: none;
-		height: 100rpx;
-		width: 95%;
-		margin: 0 auto;
-		margin-top: 40rpx;
-		display: flex;
-		overflow: auto;
-		align-items: center;
-		text-align: center;
-		&::-webkit-scrollbar {
-			display: none;
-		}
-		li{
-			flex-shrink: 0;
-			width: 120rpx;
-			color: #888;
-		}
-		.li-active{
-			font-size: 20px;
-			color: #333;
-		}
-	}
-	.filter{
-		width: 95%;
-		margin: 0 auto;
-		display: flex;
-		justify-content: space-around;
-		.filter-item{
-			font-size: 14px;
-			color: #555;
-		}
-	}
+
 }
 </style>
