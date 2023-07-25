@@ -82,6 +82,9 @@ try {
     uniPopup: function () {
       return __webpack_require__.e(/*! import() | uni_modules/uni-popup/components/uni-popup/uni-popup */ "uni_modules/uni-popup/components/uni-popup/uni-popup").then(__webpack_require__.bind(null, /*! @/uni_modules/uni-popup/components/uni-popup/uni-popup.vue */ 73))
     },
+    consultant: function () {
+      return __webpack_require__.e(/*! import() | components/consultant/consultant */ "components/consultant/consultant").then(__webpack_require__.bind(null, /*! @/components/consultant/consultant.vue */ 80))
+    },
   }
 } catch (e) {
   if (
@@ -174,6 +177,31 @@ exports.default = void 0;
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 var _default = {
   name: "home-filter",
   data: function data() {
@@ -206,16 +234,38 @@ var _default = {
         id: 9,
         name: '大理'
       }],
-      areaIndex: 0
+      areaIndex: 0,
+      filterList: [{
+        id: 1,
+        name: '疑惑'
+      }, {
+        id: 2,
+        name: '时间'
+      }, {
+        id: 3,
+        name: '价格'
+      }, {
+        id: 4,
+        name: '筛选'
+      }, {
+        id: 5,
+        name: '排序'
+      }],
+      filterIndex: -1
     };
   },
   methods: {
     goArea: function goArea(index) {
       this.areaIndex = index;
     },
-    open: function open() {
+    open: function open(index) {
+      this.filterIndex = index;
       // 通过组件定义的ref调用uni-popup方法 ,如果传入参数 ，type 属性将失效 ，仅支持 ['top','left','bottom','right','center']
-      this.$refs.popup.open('bottom');
+      this.$refs.popup.open('top');
+      console.log(this.$refs.popup);
+    },
+    close: function close() {
+      this.filterIndex = -1;
     }
   }
 };

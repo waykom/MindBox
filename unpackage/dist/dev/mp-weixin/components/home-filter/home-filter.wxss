@@ -24,9 +24,15 @@
   font-size: 20px;
   color: #333;
 }
+.filter-container .type-filter.data-v-83c7185c {
+  display: flex;
+  width: 90%;
+  margin: 0 auto;
+}
 .filter-container .type-filter .filter-item.data-v-83c7185c {
   display: flex;
   width: 100rpx;
+  margin-right: 20rpx;
   justify-content: space-evenly;
   align-items: center;
 }
@@ -35,7 +41,13 @@
   color: #333;
 }
 .filter-container .type-filter .filter-item .icon.data-v-83c7185c {
+  display: inline-block;
   color: #bbb;
   font-size: 6px;
+  transition: all 150ms linear;
+}
+.filter-container .type-filter .filter-item .icon .filter-active.data-v-83c7185c {
+  -webkit-transform: rotate(-180deg);
+          transform: rotate(-180deg);
 }
 

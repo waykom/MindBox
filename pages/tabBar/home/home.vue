@@ -5,14 +5,17 @@
 				<view class="header_img">
 					<image src="../../../static/images/logo/logo.png" mode="aspectFit"></image>
 				</view>
-				<view class="header_text">
+				<view class="header-text">
+					<text>让孤独的灵魂有处可栖！</text>
+				</view>
+				<!-- <view class="header_text">
 					<view>
 						<text style="font-size: 16px;font-weight: 600;">心事盒——让孤独的灵魂有处可栖！</text>
 					</view>
 					<view>
 						<text style="font-size: 10px;">Mindbox-Create a haven for the lonely souls！</text>
 					</view>
-				</view>
+				</view> -->
 			</view>
 			<view class="header_main">
 				<view style="margin-top: 70rpx;">
@@ -54,12 +57,25 @@
 		</view>
 		<view style="height: 120rpx;"></view>
 		<view class="msg">
-			<view>			
+			<!-- <view>			
+				<text class="iconfont tongzhi">&#xe606;</text>
+			</view> -->
+			<!-- <view style="margin-left: 18rpx;">
+				<text>心理咨询如何起作用？</text>
+			</view> -->
+			<view>
 				<text class="iconfont tongzhi">&#xe606;</text>
 			</view>
-			<view style="margin-left: 18rpx;">
-				<text>心理咨询如何起作用？</text>
-			</view>
+			<swiper class="msg-swiper"
+				circular
+				vertical
+				:autoplay="true" 
+				:interval="5000"
+				:duration="600">
+				<swiper-item v-for="(i,index) in 3" :key="index">
+					<view class="swiper-item-msg">心理咨询如何起作用？{{ i }}</view>
+				</swiper-item>
+			</swiper>
 		</view>
 		<view class="search">
 			<view>
@@ -88,7 +104,7 @@
 					<text>心事问答</text>
 				</view>
 			</view>
-			<view class="nav_box">
+			<view class="nav_box" @click="open">
 				<view class="nav_box_content" style="background-color: #60F1DD;">
 					<text class="iconfont nav_icon">&#xe6a1;</text>
 				</view>
@@ -96,6 +112,18 @@
 					<text>心理咨询</text>
 				</view>
 			</view>
+			<uni-popup :animation="false" mask-background-color="rgba(255,255,255,0)" ref="popup" type="center">
+				<view style="width: 400rpx;background-color: rgba(0, 0, 0, 0.4);;height: 250rpx;display: flex;flex-direction: column;justify-content: space-evenly;">
+					<button plain style="
+						height: 80rpx;width: 250rpx;line-height: 80rpx;border-radius: 30rpx;
+						background-color: #F1DDF1;border-color: #F1DDF1;
+					">心理咨询</button>
+					<button plain style="
+						height: 80rpx;width: 250rpx;line-height: 80rpx;border-radius: 30rpx;
+						background-color: #F1DDF1;border-color: #F1DDF1;
+					">倾述热线</button>
+				</view>
+			</uni-popup>
 			<view class="nav_box">
 				<view class="nav_box_content" style="background-color: #FEAAA9;">
 					<text class="iconfont nav_icon">&#xe602;</text>
@@ -153,11 +181,16 @@
 	export default {
 		data() {
 			return {
-
+				showMind: false,
 			}
 		},
 		methods: {
-
+			showMindPopup() {
+				this.showMind = true;
+			},
+			open(){
+				this.$refs.popup.open('center')
+			}
 		}
 	}
 </script>
@@ -172,22 +205,33 @@
 			height: 100rpx;
 			width: 100%;
 			display: flex;
-			align-items: flex-end;
+			padding-top: 30rpx;
+			box-sizing: border-box;
+			align-items: center;
+			// align-items: flex-end;
+			
 			.header_img{
-				height: 100%;
+				// height: 100%;
 				image{
 					width: 100rpx;
 					height: 100rpx;
 					margin: 10rpx 10rpx 0 10rpx;
 				}
 			}
-			.header_text{
+			.header-text{
+				font-size: 14px;
+				font-weight: 700;
+				margin-left: 30rpx;
+				color: #fff;
+			}
+			/* .header_text{
 				display: flex;
 				flex-direction: column;
 				text{
 					color:white;
 				}
-			}
+			} */
+			
 		}
 		.header_main{
 			display: flex;
@@ -255,7 +299,7 @@
 			}
 		}
 	}	
-	.msg{
+	/* .msg{
 		height: 80rpx;
 		line-height: 80rpx;
 		display: flex;
@@ -265,6 +309,29 @@
 		.tongzhi{
 			font-size: 28px;
 			color: #61B3A3;
+		}
+	} */
+	.msg{
+		height: 80rpx;
+		// background-color: #bac;
+		display: flex;
+		margin-left: 30rpx;
+		margin-bottom: 15rpx;
+		font-size: 12px;
+		align-items: center;
+		.tongzhi{
+			font-size: 28px;
+			color: #61B3A3;
+		}
+		.msg-swiper{
+			height: 30rpx;
+			line-height: 30rpx;
+			width: 80%;
+			margin-left: 18rpx;
+			// background-color: #bcf;
+			.swiper-item-msg{
+				
+			}
 		}
 	}
 	.search{

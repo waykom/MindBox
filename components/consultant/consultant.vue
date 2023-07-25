@@ -5,12 +5,15 @@
 		</view>
 		<view class="right-content">
 			<view class="right-msg">
-				<view class="name-grade">
+				<view class="name-grade-area">
 					<view>
 						<text class="name">张三</text>
 					</view>
 					<view>
 						<text class="grade">初级咨询师</text>
+					</view>
+					<view>
+						<text class="area">上海</text>
 					</view>
 				</view>
 				<view class="grade">
@@ -20,7 +23,14 @@
 					<text>擅长：人际关系、成长问题</text>
 				</view>
 				<view class="experience">
-					<text>从业三年</text>
+					<view class="left">
+						<text>从业三年</text>
+					</view>
+					<view class="right">
+						<text style="color: red;font-size: 10px;">
+							￥<text style="font-size: 18px;">200</text>/次
+						</text>
+					</view>
 				</view>
 			</view>
 			<view class="right-btn">
@@ -73,14 +83,15 @@
 			display: flex;
 			flex-direction: column;
 			font-size: 14px;
-			.name-grade{
+			.name-grade-area{
 				display: flex;
 				align-items: center;
+				justify-content: space-between;
 				margin-bottom: 10rpx;
 				.name{
 					font-size: 18px;
 					font-weight: bold;
-					margin-right: 40rpx;
+					// margin-right: 40rpx;
 				}
 			}
 			.grade{
@@ -90,6 +101,9 @@
 			}
 			.experience{
 				color: #666;
+				display: flex;
+				justify-content: space-between;
+				align-items: flex-end;
 			}
 		}
 		.right-btn{
@@ -100,12 +114,12 @@
 				height: 60rpx;
 				line-height: 50rpx;
 				border-radius: 50rpx;
-				border: 2px solid #079D6C;
+				border: 2px solid #F3D4B3;
 				margin-right: 20rpx;
 				font-size: 14px;
 			}
 			.btn-b{
-				background-color: #079D6C;
+				background-color: #F3D4B3;
 				color: white;
 			}
 		}

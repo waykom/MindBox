@@ -14,6 +14,8 @@
 
 <style>
 	/*每个页面公共css */
+/* @import 'vant/lib/index.css'; */
+
 @font-face {
   font-family: 'iconfont';
   src: url('~@/static/iconfont/iconfont.woff2') format('woff2'),
