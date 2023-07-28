@@ -82,8 +82,7 @@
 					clickable
 					:to="item.to"
 					@click="onClick"
-					v-for="item in commonUseList" :key="item.id"
-				>
+					v-for="item in commonUseList" :key="item.id">
 					<template #header>
 						<view class="slot-box-header">
 							<!-- <image class="slot-image" style="width: 50rpx;height: 50rpx;" src="@/static/images/icon/tabBar/user.png" mode="aspectFit"></image> -->
