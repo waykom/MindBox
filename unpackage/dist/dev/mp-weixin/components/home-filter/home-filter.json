@@ -1,7 +1,9 @@
 {
   "usingComponents": {
     "uni-popup": "/uni_modules/uni-popup/components/uni-popup/uni-popup",
-    "consultant": "/components/consultant/consultant"
+    "filter-item": "/components/filter-item/filter-item",
+    "consultant": "/components/consultant/consultant",
+    "uni-datetime-picker": "/uni_modules/uni-datetime-picker/components/uni-datetime-picker/uni-datetime-picker"
   },
   "component": true
 }

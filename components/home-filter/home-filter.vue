@@ -31,26 +31,42 @@
 					@maskClick="close"
 					type="top">
 				<view v-show="filterIndex==0">
-					这是疑惑
+					<!-- 困惑模块 -->
+					<filter-item></filter-item>
 				</view>
+				<!-- 这是时间 -->
 				<view v-show="filterIndex==1">
-					这是时间
+					
 				</view>
 				<view v-show="filterIndex==2">
-					这是价格
+					<!-- 这是价格 -->
+					<filter-item></filter-item>
 				</view>
 				<view v-show="filterIndex==3">
-					这是筛选
+					<!-- 这是筛选 -->
+					<filter-item></filter-item>
 				</view>
 				<view v-show="filterIndex==4">
-					这是排序
+					<!-- 这是排序 -->
+					<filter-item></filter-item>
 				</view>
 			</uni-popup>
 		</view>
-		
 		<consultant v-for="(i,index) in 10" :key="index"></consultant>
 		
-		</view>
+		<!-- 这是时间 -->
+		<template>
+			<view v-show="filterIndex==1">
+				<uni-datetime-picker
+					@change="changeDate"
+					ref="date"
+					@maskClick="close"
+					:clear-icon="false"
+					v-model="datetimesingle"
+				 />
+			</view>
+		</template>
+		
 	</view>
 </template>
 
@@ -78,8 +94,12 @@
 					{id:4,name:'筛选'},
 					{id:5,name:'排序'}
 				],
-				filterIndex:-1
+				filterIndex:-1,
+				datetimesingle:''
 			}
+		},
+		mounted() {
+			this.datetimesingle = Date.now() - 2*24*3600*1000
 		},
 		methods:{
 			goArea(index){
@@ -87,12 +107,23 @@
 			},
 			open(index){
 				this.filterIndex = index
-				// 通过组件定义的ref调用uni-popup方法 ,如果传入参数 ，type 属性将失效 ，仅支持 ['top','left','bottom','right','center']
-				this.$refs.popup.open('top')
-				console.log(this.$refs.popup)
+				if (index === 1) {
+					// 如果点击的是 `时间`
+					// this.$refs.date.$el.style.display = 'block'
+					this.$refs.date.show()
+					// console.log(this.$refs.date.$el.style.display = 'block')
+				} else {
+					// 通过组件定义的ref调用uni-popup方法 ,如果传入参数 ，type 属性将失效 ，仅支持 ['top','left','bottom','right','center']
+					this.$refs.popup.open('top')
+				}
 			},
 			close(){
 				this.filterIndex = -1
+			},
+			changeDate(e) {
+				this.filterIndex = -1
+				// 时间选择器输出的时间
+				console.log('时间选择器输出的时间',e)
 			}
 		}
 	}
@@ -107,7 +138,7 @@
 		height: 100rpx;
 		width: 95%;
 		margin: 0 auto;
-		margin-top: 40rpx;
+		// margin-top: 10rpx;
 		display: flex;
 		overflow: auto;
 		align-items: center;
@@ -117,9 +148,11 @@
 		}
 		li{
 			flex-shrink: 0;
-			width: 120rpx;
+			// width: 120rpx;
+			margin: 0 20rpx;
 			color: #888;
 			font-size: 14px;
+			transition: all 0.1s linear;
 		}
 		.li-active{
 			font-size: 20px;
@@ -152,5 +185,6 @@
 			}
 		}
 	}
+	
 }
 </style>

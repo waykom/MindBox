@@ -1,0 +1,52 @@
+.emo-container.data-v-5ed7d716 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+.emo-container .emo-item.data-v-5ed7d716 {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  margin-top: 40rpx;
+}
+.emo-container .emo-item .top.data-v-5ed7d716 {
+  font-size: 18px;
+}
+.emo-container .emo-item .bottom.data-v-5ed7d716 {
+  background-color: #fff;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 30rpx;
+  justify-content: flex-start;
+}
+.emo-container .emo-item .bottom button.data-v-5ed7d716 {
+  height: 50rpx;
+  margin-right: 40rpx;
+  margin-bottom: 30rpx;
+  line-height: 50rpx;
+  border-radius: 25rpx;
+  background-color: #F1F4F5;
+  border: none;
+  font-size: 14px;
+  color: #666;
+}
+.emo-container .emo-btns.data-v-5ed7d716 {
+  display: flex;
+  width: 92%;
+  margin-bottom: 20rpx;
+  margin-top: 100rpx;
+}
+.emo-container .emo-btns button.data-v-5ed7d716 {
+  width: 300rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  border-radius: 10rpx;
+  background-color: #F1F4F5;
+  border: none;
+  color: #333;
+}
+.emo-container .emo-btns .bts-right.data-v-5ed7d716 {
+  background-color: #F3D4B3;
+}
+

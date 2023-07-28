@@ -1,0 +1,12 @@
+.container .header.data-v-ca4aeed2 {
+  height: 100rpx;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.container .header text.data-v-ca4aeed2 {
+  width: 100rpx;
+  text-align: center;
+}
+
