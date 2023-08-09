@@ -1,0 +1,51 @@
+.container {
+  width: 100%;
+  background-color: #F8F9FD;
+}
+.container .add {
+  width: 94%;
+  margin: 0 auto;
+  height: 400rpx;
+  border-radius: 20rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ddd;
+}
+.container .acinfo {
+  width: 96%;
+  height: 100rpx;
+  line-height: 100rpx;
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0 auto;
+}
+.container .activity {
+  width: 94%;
+  margin: 0 auto;
+  overflow: hidden;
+  border-radius: 20rpx;
+  background-color: #fff;
+}
+.container .activity .box {
+  display: flex;
+  justify-content: space-between;
+  height: 90rpx;
+  align-items: center;
+  padding-left: 20rpx;
+}
+.container .activity .content {
+  padding-left: 20rpx;
+}
+.container .activity .content .itt {
+  height: 90rpx;
+  line-height: 90rpx;
+}
+.container .activity .send {
+  height: 100rpx;
+  background-color: #F6E6F6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+

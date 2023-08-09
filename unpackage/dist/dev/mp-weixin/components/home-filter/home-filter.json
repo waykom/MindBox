@@ -1,9 +1,10 @@
 {
   "usingComponents": {
+    "nav-list": "/components/nav-list/nav-list",
     "uni-popup": "/uni_modules/uni-popup/components/uni-popup/uni-popup",
     "filter-item": "/components/filter-item/filter-item",
-    "consultant": "/components/consultant/consultant",
-    "uni-datetime-picker": "/uni_modules/uni-datetime-picker/components/uni-datetime-picker/uni-datetime-picker"
+    "inline-calendar": "/components/inline-calendar/inline-calendar",
+    "consultant": "/components/consultant/consultant"
   },
   "component": true
 }

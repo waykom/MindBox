@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "倾述热线",
+  "enablePullDownRefresh": false,
+  "usingComponents": {
+    "nav-list": "/components/nav-list/nav-list",
+    "consultant": "/components/consultant/consultant"
+  }
+}

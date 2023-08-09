@@ -1,0 +1,130 @@
+.container.data-v-61b0f3bd {
+  width: 100%;
+}
+.container .head.data-v-61b0f3bd {
+  height: 630rpx;
+  display: flex;
+  flex-direction: column;
+  margin-top: 30rpx;
+  align-items: center;
+}
+.container .head .text.data-v-61b0f3bd {
+  width: 92%;
+  font-size: 26px;
+  font-weight: bold;
+}
+.container .info.data-v-61b0f3bd {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 94%;
+  margin: 0 auto;
+}
+.container .info .title.data-v-61b0f3bd {
+  margin-left: 20rpx;
+}
+.container .info .content.data-v-61b0f3bd {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20rpx;
+}
+.container .info .content .leader.data-v-61b0f3bd {
+  height: 65rpx;
+  line-height: 65rpx;
+}
+.container .info .schedule.data-v-61b0f3bd {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  margin-top: 20rpx;
+}
+.container .info .schedule .progress.data-v-61b0f3bd {
+  width: 80%;
+  height: 40rpx;
+  border-radius: 20rpx;
+  overflow: hidden;
+  background-color: #ddd;
+}
+.container .info .schedule .text.data-v-61b0f3bd {
+  font-size: 8px;
+}
+.container .intro.data-v-61b0f3bd {
+  display: flex;
+  width: 94%;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 0 auto;
+  margin-top: 70rpx;
+}
+.container .intro .title.data-v-61b0f3bd {
+  margin-left: 20rpx;
+}
+.container .intro .content.data-v-61b0f3bd {
+  margin-top: 30rpx;
+}
+.container .intro .content .text.data-v-61b0f3bd {
+  height: 55rpx;
+  line-height: 55rpx;
+  font-size: 14px;
+}
+.container .atten.data-v-61b0f3bd {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 94%;
+  margin: 0 auto;
+  margin-top: 40rpx;
+}
+.container .atten .title.data-v-61b0f3bd {
+  margin-left: 20rpx;
+}
+.container .atten .content.data-v-61b0f3bd {
+  margin-top: 30rpx;
+}
+.container .atten .content .text.data-v-61b0f3bd {
+  height: 55rpx;
+  line-height: 55rpx;
+  font-size: 14px;
+}
+.container .atten .contact.data-v-61b0f3bd {
+  display: flex;
+  width: 100%;
+  height: 500rpx;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.container .atten .contact .qr.data-v-61b0f3bd {
+  margin-top: 30rpx;
+  width: 250rpx;
+  height: 250rpx;
+  background-color: #bfc;
+}
+.container .btn.data-v-61b0f3bd {
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+}
+.container .btn .price.data-v-61b0f3bd {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  color: red;
+}
+.container .btn .sign-up-now.data-v-61b0f3bd {
+  flex: 1;
+  height: 80rpx;
+  line-height: 80rpx;
+  background-color: #F6E6F6;
+  border: none;
+  border-radius: 20rpx;
+}
+

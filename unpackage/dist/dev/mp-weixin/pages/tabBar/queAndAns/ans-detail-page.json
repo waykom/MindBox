@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "问答详细",
+  "enablePullDownRefresh": false,
+  "usingComponents": {
+    "uni-popup": "/uni_modules/uni-popup/components/uni-popup/uni-popup"
+  }
+}

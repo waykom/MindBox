@@ -22,7 +22,6 @@ function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { va
 wx.__webpack_require_UNI_MP_PLUGIN__ = __webpack_require__;
 _vue.default.config.productionTip = false;
 _App.default.mpType = 'app';
-// Vue.use(Vant);
 var app = new _vue.default(_objectSpread({}, _App.default));
 createApp(app).$mount();
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/wx.js */ 1)["default"], __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["createApp"]))

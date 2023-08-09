@@ -4,17 +4,133 @@
 		{
 			"path": "pages/tabBar/home/home",
 			"style": {
-				"navigationBarTitleText": "",
+				"navigationBarTitleText": "首页",
 				"enablePullDownRefresh": false
 			}
 		},
 		{
+			"path" : "pages/tabBar/home/online-evaluation/index",
+			"style" :
+			{
+					"navigationBarTitleText": "在线测评",
+					"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path" : "pages/tabBar/home/online-evaluation/enter-test-page",
+			"style" :
+			{
+					"navigationBarTitleText": "在线测评",
+					"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path" : "pages/tabBar/home/online-evaluation/action-test-page",
+			"style" :
+			{
+					"navigationBarTitleText": "在线测评",
+					"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path" : "pages/tabBar/home/online-evaluation/test-result-page",
+			"style" :
+			{
+					"navigationBarTitleText": "测评结果",
+					"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path" : "pages/tabBar/home/counseling/counseling",
+			"style" :
+			{
+					"navigationBarTitleText": "心理咨询",
+					"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path" : "pages/tabBar/home/counseling/consultant-detail",
+			"style" :
+			{
+					"navigationBarTitleText": "咨询师详情",
+					"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path" : "pages/tabBar/home/counseling/buy-success",
+			"style" :
+			{
+					"navigationBarTitleText": "预约成功",
+					"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path" : "pages/tabBar/home/counseling/hotline",
+			"style" :
+			{
+					"navigationBarTitleText": "倾述热线",
+					"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path" : "pages/tabBar/home/fun-salon/index",
+			"style" :
+			{
+					"navigationBarTitleText": "趣味沙龙",
+					"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path" : "pages/tabBar/home/fun-salon/detail",
+			"style" :
+			{
+					"navigationBarTitleText": "趣味沙龙读书会",
+					"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path" : "pages/tabBar/home/fun-salon/add-salon",
+			"style" :
+			{
+					"navigationBarTitleText": "发布活动",
+					"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path" : "pages/tabBar/home/mind-share/index",
+			"style" :
+			{
+					"navigationBarTitleText": "心事分享",
+					"enablePullDownRefresh": false
+			}
+		},
+		
+		{
 			"path": "pages/tabBar/queAndAns/queAndAns",
 			"style": {
-				"navigationBarTitleText": "",
+				"navigationBarTitleText": "心事问答",
 				"enablePullDownRefresh": false
 			}
 		},
+		{
+			"path": "pages/tabBar/queAndAns/ans-detail-page",
+			"style": {
+				"navigationBarTitleText": "问答详细",
+				"enablePullDownRefresh": false,
+				"usingComponents": {
+					// "van-button": "/wxcomponents/vant-weapp/dist/button/index"
+				}
+			}
+		},
+		{
+			"path": "pages/tabBar/queAndAns/ans-commit-page",
+			"style": {
+				"navigationBarTitleText": "提出问题",
+				"enablePullDownRefresh": false
+			}
+		},
+		
+		
 		{
 			"path": "pages/tabBar/seek/seek",
 			"style": {
@@ -32,16 +148,24 @@
 		{
 			"path": "pages/tabBar/user/user",
 			"style": {
-				"navigationBarTitleText": "",
+				// "navigationBarTitleText": "",
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path" : "pages/tabBar/course/detial",
+			"style" :                                                                                    
+			{
+				// "navigationBarTitleText": "",
 				"enablePullDownRefresh": false
 			}
 		}
-  ],
+	],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",
-		"navigationBarTitleText": "心事盒一让孤独的灵魂有处可栖",
-		"navigationBarBackgroundColor": "#F8F8F8",
-		"backgroundColor": "#F8F8F8"
+		"navigationBarTitleText": "心事盒",
+		"navigationBarBackgroundColor": "#fff",
+		"backgroundColor": "#fff"
 	},
 	"uniIdRouter": {},
 	"tabBar": {
@@ -81,5 +205,4 @@
 			}
 		]
 	}
-
 }

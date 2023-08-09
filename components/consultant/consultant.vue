@@ -1,46 +1,65 @@
 <template>
 	<view class="box">
 		<view class="left-img">
-			<image style="width: 200rpx;height: 200rpx;" src="../../static/images/icon/tabBar/user.png" mode="aspectFit"></image>
+			<image style="width: 200rpx;height: 200rpx;" src="@/static/images/icon/tabBar/user.png" mode="aspectFit"></image>
 		</view>
 		<view class="right-content">
 			<view class="right-msg">
 				<view class="name-grade-area">
-					<view>
-						<text class="name">张三</text>
+					<view class="ngleft">
+						<text class="name">张三李</text>
+						<text class="ngrade">初级咨询师</text>
 					</view>
 					<view>
-						<text class="grade">初级咨询师</text>
-					</view>
-					<view>
-						<text class="area">上海</text>
+						<text style="font-size: 20px;margin-right: 20rpx;" class="iconfont">&#xe611;</text>
 					</view>
 				</view>
 				<view class="grade">
-					<text>国家一级心理咨询师</text>
+					<text>上海</text>
+					<text style="margin-left: 20rpx;">36岁</text>
 				</view>
 				<view class="great">
-					<text>擅长：人际关系、成长问题</text>
+					<view class="great-box">
+						<text>人际关系</text>
+					</view>
+					<view class="great-box">
+						<text>人际关系</text>
+					</view>
+					<view class="great-box">
+						<text>人际关系</text>
+					</view>
+					<view class="great-box">
+						<text>人际关系</text>
+					</view>
 				</view>
 				<view class="experience">
 					<view class="left">
-						<text>从业三年</text>
+						<view class="exbox">
+							<text>200</text>
+							<text>长程个案</text>
+						</view>
+						<view class="exbox">
+							<text>200</text>
+							<text>咨询时长</text>
+						</view>
+						<view class="exbox">
+							<text>200</text>
+							<text>续单率</text>
+						</view>
 					</view>
 					<view class="right">
-						<text style="color: red;font-size: 10px;">
-							￥<text style="font-size: 18px;">200</text>/次
-						</text>
+						<text><slot>预约</slot></text>
 					</view>
 				</view>
 			</view>
-			<view class="right-btn">
+<!-- 			<view class="right-btn">
 				<view>
-					<button plain class="btn-a" hover-class="none">预约</button>
+					<button plain class="btn-a btn" hover-class="none">预约</button>
 				</view>
 				<view>
-					<button plain class="btn-b" hover-class="none">提问</button>
+					<button plain class="btn-b btn" hover-class="none">提问</button>
 				</view>
-			</view>
+			</view> -->
 		</view>
 	</view>
 </template>
@@ -58,9 +77,9 @@
 <style lang="less" scoped>
 .box{
 	width: 97%;
-	height: 350rpx;
+	height: 300rpx;
 	margin: 0 auto;
-	margin-top: 50rpx;
+	margin-top: 30rpx;
 	border-radius: 20rpx;
 	box-shadow: 0px 0px 10px #ccc;
 	display: flex;
@@ -77,6 +96,7 @@
 	.right-content{
 		display: flex;
 		height: 100%;
+		width: 450rpx;
 		flex-direction: column;
 		justify-content: space-evenly;
 		.right-msg{
@@ -88,28 +108,76 @@
 				align-items: center;
 				justify-content: space-between;
 				margin-bottom: 10rpx;
-				.name{
-					font-size: 18px;
-					font-weight: bold;
-					// margin-right: 40rpx;
+				.ngleft{
+					display: flex;
+					align-items: center;
+					.name{
+						font-size: 18px;
+						font-weight: bold;
+						// margin-right: 40rpx;
+					}
+					.ngrade{
+						font-size: 14px;
+						margin-left: 10px;
+					}
 				}
 			}
 			.grade{
+				font-size: 12px;
+				color: #666;
 			}
 			.great{
-				color: #666;
-			}
-			.experience{
+				height: 60rpx;
 				color: #666;
 				display: flex;
+				justify-content: space-around;
+				align-items: center;
+				font-size: 10px;
+				.great-box{
+					height: 35rpx;
+					line-height: 35rpx;
+					background-color: #F6E6F6;
+					border-radius: 20rpx;
+					padding: 0 10rpx;
+				}
+			}
+			.experience{
+				display: flex;
+				height: 80rpx;
+				// background-color: #F6E6F6;
+				align-items: center;
 				justify-content: space-between;
-				align-items: flex-end;
+				.left{
+					display: flex;
+					font-size: 10px;
+					.exbox{
+						display: flex;
+						flex-direction: column;
+						justify-content: center;
+						align-items: center;
+						width: 110rpx;
+						// background-color: #F6E6F6;
+					}
+					.exbox:nth-child(2){
+						border-left: 1rpx solid #ddd;
+						border-right: 1rpx solid #ddd;
+					}
+				}
+				.right{
+					background-color: #F6E6F6;
+					border-radius: 10rpx;
+					width: 100rpx;
+					height: 50rpx;
+					display: flex;
+					justify-content: center;
+					align-items: center;
+				}
 			}
 		}
 		.right-btn{
 			display: flex;
 			justify-content: flex-end;
-			button{
+			.btn{
 				width: 130rpx;
 				height: 60rpx;
 				line-height: 50rpx;

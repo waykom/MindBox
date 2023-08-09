@@ -1,5 +1,8 @@
 {
-  "navigationBarTitleText": "",
+  "navigationBarTitleText": "心事问答",
   "enablePullDownRefresh": false,
-  "usingComponents": {}
+  "usingComponents": {
+    "top-search": "/components/top-search/top-search",
+    "nav-list": "/components/nav-list/nav-list"
+  }
 }

@@ -1,0 +1,130 @@
+.container {
+  width: 100%;
+}
+.container .hot-activity {
+  width: 94%;
+  margin: 0 auto;
+}
+.container .hot-activity .title {
+  height: 150rpx;
+  display: flex;
+  align-items: center;
+}
+.container .hot-activity .title .dog {
+  font-size: 18px;
+  line-height: 8px;
+  font-weight: 600;
+  border-bottom: 10px solid #F6E6F6;
+  border-radius: 10rpx;
+}
+.container .hot-activity .content {
+  display: flex;
+  flex-wrap: wrap;
+}
+.container .hot-activity .content .box {
+  width: 32%;
+  height: 415rpx;
+}
+.container .hot-activity .content .box .img {
+  width: 227rpx;
+  height: 200rpx;
+  overflow: hidden;
+  border-radius: 20rpx;
+  background-color: #bfc;
+}
+.container .hot-activity .content .box .box-title {
+  width: 92%;
+  margin: 0 auto;
+  font-size: 12px;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  margin-top: 20rpx;
+}
+.container .hot-activity .content .box .time {
+  width: 92%;
+  margin: 0 auto;
+  font-size: 10px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: #666;
+  margin-top: 12rpx;
+}
+.container .hot-activity .content .box .time .week {
+  margin: 0 15rpx;
+}
+.container .hot-activity .content .box .area-price {
+  width: 92%;
+  margin: 0 auto;
+  display: flex;
+  margin-top: 20rpx;
+  font-size: 12px;
+  color: #666;
+  justify-content: space-between;
+}
+.container .hot-activity .content .box:nth-child(3n-1) {
+  margin: 0 2%;
+}
+.container .type-activity {
+  width: 100%;
+  border-top: 1px solid #ddd;
+}
+.container .type-activity .list {
+  width: 92%;
+  margin: 0 auto;
+}
+.container .type-activity .list .li-box {
+  height: 250rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.container .type-activity .list .li-box .li-img-container {
+  width: 230rpx;
+  height: 200rpx;
+  flex-shrink: 0;
+  border-radius: 20rpx;
+  background-color: #bfc;
+}
+.container .type-activity .list .li-box .li-content {
+  height: 70%;
+  margin-left: 40rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.container .type-activity .list .li-box .li-content .li-title {
+  font-size: 14px;
+}
+.container .type-activity .list .li-box .li-content .li-time {
+  font-size: 10px;
+  color: #666;
+}
+.container .type-activity .list .li-box .li-content .li-time .week {
+  margin: 0 10rpx;
+}
+.container .type-activity .list .li-box .li-content .li-area {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  color: #666;
+}
+.container .fixed {
+  position: fixed;
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+  background-color: #F6E6F6;
+  right: 10px;
+  bottom: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container .fixed .icon {
+  font-size: 60px;
+  color: #fff;
+}
+

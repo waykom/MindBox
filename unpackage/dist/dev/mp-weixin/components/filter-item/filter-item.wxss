@@ -19,10 +19,16 @@
   flex-wrap: wrap;
   margin-top: 30rpx;
   justify-content: flex-start;
+  align-items: center;
 }
-.emo-container .emo-item .bottom button.data-v-5ed7d716 {
+.emo-container .emo-item .bottom .item.data-v-5ed7d716 {
+  display: flex;
+  align-items: center;
   height: 50rpx;
-  margin-right: 40rpx;
+  margin: 10rpx;
+}
+.emo-container .emo-item .bottom .item .btn.data-v-5ed7d716 {
+  height: 50rpx;
   margin-bottom: 30rpx;
   line-height: 50rpx;
   border-radius: 25rpx;
@@ -31,13 +37,16 @@
   font-size: 14px;
   color: #666;
 }
+.emo-container .emo-item .bottom .item .active.data-v-5ed7d716 {
+  background-color: #F3D4B3;
+}
 .emo-container .emo-btns.data-v-5ed7d716 {
   display: flex;
   width: 92%;
   margin-bottom: 20rpx;
-  margin-top: 100rpx;
+  margin-top: 50rpx;
 }
-.emo-container .emo-btns button.data-v-5ed7d716 {
+.emo-container .emo-btns .btn.data-v-5ed7d716 {
   width: 300rpx;
   height: 80rpx;
   line-height: 80rpx;

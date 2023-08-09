@@ -1,0 +1,52 @@
+.container {
+  width: 100%;
+}
+.container .ttime {
+  display: flex;
+  justify-content: flex-end;
+  height: 100rpx;
+  align-items: center;
+  font-size: 10px;
+  color: #666;
+}
+.container .ttime .time {
+  width: 350rpx;
+  display: flex;
+  justify-content: space-evenly;
+}
+.container .ttitle {
+  height: 110rpx;
+  padding-left: 30rpx;
+}
+.container .result {
+  width: 90%;
+  margin: 0 auto;
+}
+.container .result .rtop {
+  height: 250rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.container .result .des {
+  font-size: 12px;
+  line-height: 35rpx;
+  color: #666;
+}
+.container .result .op {
+  height: 300rpx;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.container .result .op .opbtn {
+  height: 80rpx;
+  line-height: 80rpx;
+  font-size: 14px;
+  border-radius: 20rpx;
+  border: 1px solid #ddd;
+  background-color: #F3D4B3;
+  color: white;
+}
+

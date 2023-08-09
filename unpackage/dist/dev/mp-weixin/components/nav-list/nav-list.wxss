@@ -1,0 +1,27 @@
+.item-list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  height: 100rpx;
+  width: 95%;
+  margin: 0 auto;
+  display: flex;
+  overflow: auto;
+  align-items: center;
+  text-align: center;
+}
+.item-list::-webkit-scrollbar {
+  display: none;
+}
+.item-list .lis {
+  flex-shrink: 0;
+  margin: 0 20rpx;
+  color: #888;
+  font-size: 14px;
+  transition: all 0.1s linear;
+}
+.item-list .li-active {
+  font-size: 20px;
+  color: #333;
+}
+

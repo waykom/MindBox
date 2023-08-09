@@ -1,0 +1,26 @@
+.container.data-v-1d5abfa4 {
+  width: 100%;
+}
+.container .test-box.data-v-1d5abfa4 {
+  width: 94%;
+  margin: 0 auto;
+}
+.container .test-box .topic.data-v-1d5abfa4 {
+  height: 100rpx;
+  line-height: 100rpx;
+}
+.container .test-box .box.data-v-1d5abfa4 {
+  border: 1px solid #ddd;
+  border-radius: 10rpx;
+  padding: 0 30rpx;
+}
+.container .commit.data-v-1d5abfa4 {
+  margin-top: 200rpx;
+}
+.container .commit .commit-btn.data-v-1d5abfa4 {
+  width: 200rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  background-color: #ddd;
+}
+

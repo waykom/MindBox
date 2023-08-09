@@ -1,0 +1,245 @@
+.container {
+  width: 100%;
+  /* 经典文章 */
+  /* 热门视频 */
+  /* 精选图片 */
+}
+.container .ic-list {
+  width: 94%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 3%;
+  border-top: 1px solid #ddd;
+}
+.container .ic-list .ic-box {
+  width: 25%;
+  height: 120rpx;
+  font-size: 10px;
+  color: #444;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.container .ic-list .ic-box .icon {
+  font-size: 30px;
+  color: #26A1FF;
+}
+.container .article-list {
+  width: 92%;
+  margin: 0 auto;
+}
+.container .article-list .article {
+  height: 300rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.container .article-list .article .up {
+  display: flex;
+  align-items: center;
+}
+.container .article-list .article .up .left {
+  flex: 2 0;
+}
+.container .article-list .article .up .left .read {
+  font-size: 10px;
+  color: #666;
+  margin: 20rpx 0;
+}
+.container .article-list .article .up .left .content {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  font-size: 12px;
+  color: #333;
+}
+.container .article-list .article .up .right {
+  flex: 1 0;
+}
+.container .article-list .article .up .right .img {
+  width: 200rpx;
+  height: 180rpx;
+  margin-left: 20rpx;
+  border-radius: 10rpx;
+  background-color: #bfc;
+}
+.container .article-list .article .down {
+  width: 94%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 10px;
+  color: #666;
+}
+.container .hot-video {
+  width: 100%;
+  margin-top: 30rpx;
+}
+.container .hot-video .hot-video-box {
+  width: 92%;
+  margin: 0 auto;
+  display: flex;
+  height: 200rpx;
+  align-items: center;
+  padding: 0 2%;
+  border-bottom: 1px solid #ddd;
+}
+.container .hot-video .hot-video-box .hvideo {
+  flex: 1 0;
+}
+.container .hot-video .hot-video-box .hvideo .djfkds {
+  width: 240rpx;
+  height: 170rpx;
+  border-radius: 15rpx;
+  overflow: hidden;
+  background-color: #bfc;
+}
+.container .hot-video .hot-video-box .hrigh {
+  flex: 2 0;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 20rpx;
+  height: 170rpx;
+}
+.container .hot-video .hot-video-box .hrigh .hcent {
+  font-size: 12px;
+  color: #333;
+  margin: 5rpx 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.container .hot-video .hot-video-box .hrigh .hnews {
+  font-size: 12px;
+  color: #333;
+  margin: 5rpx 0;
+}
+.container .hot-video .hot-video-box .hrigh .osjfs {
+  font-size: 10px;
+  color: #666;
+  display: flex;
+  height: 40rpx;
+  align-items: center;
+}
+.container .hot-video .hot-video-box .hrigh .osjfs .jfsdo {
+  font-size: 14px;
+}
+.container .good-img-container {
+  width: 100%;
+  padding-top: 30rpx;
+  border-top: 1px solid #ddd;
+}
+.container .good-img-container .good-img-box {
+  width: 94%;
+  margin: 0 auto;
+  height: 480rpx;
+}
+.container .good-img-container .good-img-box .user-info {
+  display: flex;
+  align-items: center;
+  height: 120rpx;
+}
+.container .good-img-container .good-img-box .user-info .user-profile {
+  width: 100rpx;
+  height: 100rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border-radius: 50%;
+  background-color: #bfc;
+}
+.container .good-img-container .good-img-box .user-info .user-msg {
+  margin-left: 20rpx;
+  font-size: 14px;
+}
+.container .good-img-container .good-img-box .user-info .user-msg .user-name {
+  height: 50rpx;
+  display: flex;
+  align-items: center;
+}
+.container .good-img-container .good-img-box .user-info .user-msg .user-name .b {
+  margin: 0 10rpx;
+  width: 30rpx;
+  height: 30rpx;
+  line-height: 30rpx;
+  color: #fff;
+  text-align: center;
+  background-color: #FF9EBA;
+  border-radius: 10rpx;
+  font-size: 12px;
+}
+.container .good-img-container .good-img-box .user-info .user-msg .user-name .c {
+  width: 60rpx;
+  height: 30rpx;
+  line-height: 30rpx;
+  color: #fff;
+  text-align: center;
+  background-color: #959DFB;
+  border-radius: 10rpx;
+  font-size: 12px;
+}
+.container .good-img-container .good-img-box .user-info .user-msg .send-time {
+  font-size: 10px;
+  color: #666;
+}
+.container .good-img-container .good-img-box .user-info .follow {
+  margin-left: 300rpx;
+  width: 120rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 12px;
+  height: 50rpx;
+  border-radius: 40rpx;
+  background-color: #627DFE;
+}
+.container .good-img-container .good-img-box .img-dec {
+  font-size: 14px;
+  color: #222;
+}
+.container .good-img-container .good-img-box .img-container::-webkit-scrollbar {
+  display: none;
+}
+.container .good-img-container .good-img-box .img-container {
+  height: 260rpx;
+  display: flex;
+  overflow: auto;
+  flex-wrap: nowrap;
+  align-items: center;
+}
+.container .good-img-container .good-img-box .img-container .img-box {
+  flex-shrink: 0;
+  margin-right: 10rpx;
+  width: 420rpx;
+  height: 230rpx;
+  border-radius: 20rpx;
+  background-color: #abcdfd;
+}
+.container .good-img-container .good-img-box .down-btn {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  font-size: 10px;
+  align-items: center;
+  color: #666;
+  justify-content: space-between;
+}
+.container .good-img-container .good-img-box .down-btn .nm {
+  display: flex;
+  align-items: center;
+}
+.container .good-img-container .good-img-box .down-btn .nm .nmicon {
+  margin-right: 10rpx;
+}
+

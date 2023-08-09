@@ -6,7 +6,7 @@
 			</view>
 			<view class="user-info">
 				<view class="img">
-					<image style="width: 100rpx;height: 100rpx;" src="../../../static/images/icon/tabBar/user.png" mode="aspectFit"></image>
+					<image style="width: 100rpx;height: 100rpx;" src="@/static/images/icon/tabBar/user.png" mode="aspectFit"></image>
 				</view>
 				<view class="info">
 					<view class="name">

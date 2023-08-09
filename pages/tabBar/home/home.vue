@@ -3,7 +3,7 @@
 		<view class="header">
 			<view class="header_box">
 				<view class="header_img">
-					<image src="../../../static/images/logo/logo.png" mode="aspectFit"></image>
+					<image class="img" src="@/static/images/logo/logo.png" mode="aspectFit"></image>
 				</view>
 				<view class="header-text">
 					<text>让孤独的灵魂有处可栖！</text>
@@ -11,11 +11,12 @@
 			</view>
 			<view class="header-swiper">
 				<swiper class="swiper"
-					:circular="true" 
+					:circular="true"
 					indicator-dots
-					:autoplay="true" 
+					:autoplay="false" 
 					:interval="3000"
-					:duration="400">
+					:duration="400"
+					>
 					<swiper-item>
 						<view class="swiper-item">
 							<video 
@@ -36,11 +37,6 @@
 					</swiper-item>
 				</swiper>
 			</view>
-
-			<!-- <view class="header_main">
-				<video class="main-video" src="https://qiniu-web-assets.dcloud.net.cn/unidoc/zh/2minute-demo.mp4"
-					controls></video>
-			</view> -->
 			
 			<view class="header_content">
 				<view class="header_content_top">
@@ -49,7 +45,7 @@
 							<text style="font-size: 18px;font-weight: bold;">你的心灵港湾</text>
 						</view>
 						<view>
-							<text style="font-size: 12px;margin-left: 20rpx; color: #9d9d9d;">呵护心灵健康</text>
+							<text style="font-size: 12px;margin-left: 20rpx; color: #9d9d9d;">专属咨询师</text>
 						</view>
 					</view>
 					<view style="align-items: center;display: flex;">
@@ -73,12 +69,6 @@
 		</view>
 		<view style="height: 140rpx;"></view>
 		<view class="msg">
-			<!-- <view>			
-				<text class="iconfont tongzhi">&#xe606;</text>
-			</view> -->
-			<!-- <view style="margin-left: 18rpx;">
-				<text>心理咨询如何起作用？</text>
-			</view> -->
 			<view>
 				<text class="iconfont tongzhi">&#xe606;</text>
 			</view>
@@ -98,99 +88,40 @@
 				<button plain class="search_btn">绑定手机号</button>
 			</view>
 			<view>
-				<!-- <uni-easyinput prefixIcon="search" placeholder="前往搜索"></uni-easyinput> -->
-				<!-- <text class="iconfont">&#xe60d;</text> -->
 				<input class="search_input" type="text" value="" placeholder="前往搜索" />
 			</view>
 		</view>
 		<view class="nav_list">
-			<view class="nav_box">
-				<view class="nav_box_content" style="background-color: #FFD590;">
-					<text class="iconfont nav_icon">&#xe74f;</text>
+			<view class="nav_box" @click="handleClick(item)" v-for="item in iconNavList" :key="item.id">
+				<view class="nav_box_content" :style="{'background-color': item.backgroundColor}">
+					<text class="iconfont nav_icon">{{ item.iconfont }}</text>
 				</view>
 				<view>
-					<text>在线测评</text>
-				</view>
-			</view>
-			<view class="nav_box">
-				<view class="nav_box_content" style="background-color: #6ADFFB;">
-					<text class="iconfont nav_icon">&#xe638;</text>
-				</view>
-				<view>
-					<text>心事问答</text>
-				</view>
-			</view>
-			<view class="nav_box" @click="open">
-				<view class="nav_box_content" style="background-color: #60F1DD;">
-					<text class="iconfont nav_icon">&#xe6a1;</text>
-				</view>
-				<view>
-					<text>心理咨询</text>
+					<text>{{ item.name }}</text>
 				</view>
 			</view>
 			<uni-popup :animation="false" mask-background-color="rgba(255,255,255,0)" ref="popup" type="center">
 				<view style="width: 400rpx;background-color: rgba(0, 0, 0, 0.4);;height: 250rpx;display: flex;flex-direction: column;justify-content: space-evenly;">
-					<button plain style="
+					<button plain 
+					@click="handlePopupClick('counseling/counseling')"
+					style="
 						height: 80rpx;width: 250rpx;line-height: 80rpx;border-radius: 30rpx;
 						background-color: #F1DDF1;border-color: #F1DDF1;
 					">心理咨询</button>
-					<button plain style="
+					<button plain 
+					@click="handlePopupClick('counseling/hotline')"
+					style="
 						height: 80rpx;width: 250rpx;line-height: 80rpx;border-radius: 30rpx;
 						background-color: #F1DDF1;border-color: #F1DDF1;
 					">倾述热线</button>
 				</view>
 			</uni-popup>
-			<view class="nav_box">
-				<view class="nav_box_content" style="background-color: #FEAAA9;">
-					<text class="iconfont nav_icon">&#xe602;</text>
-				</view>
-				<view>
-					<text>课程与服务</text>
-				</view>
-			</view>
-			<view class="nav_box">
-				<view class="nav_box_content" style="background-color: #DBBEF9;">
-					<text class="iconfont nav_icon">&#xe651;</text>
-				</view>
-				<view>
-					<text>趣味沙龙</text>
-				</view>
-			</view>
-			<view class="nav_box">
-				<view class="nav_box_content" style="background-color: #8DE4FB;">
-					<text class="iconfont nav_icon">&#xe654;</text>
-				</view>
-				<view>
-					<text>心事分享</text>
-				</view>
-			</view>
 		</view>
-		<!-- <view class="swiper_container">
-			<swiper class="swiper" 
-				:circular="false" 
-				indicator-dots 
-				:autoplay="true" 
-				:interval="3000"
-				:duration="400">
-				<swiper-item>
-					<view class="swiper-item">A</view>
-				</swiper-item>
-				<swiper-item>
-					<view class="swiper-item">B</view>
-				</swiper-item>
-				<swiper-item>
-					<view class="swiper-item">C</view>
-				</swiper-item>
-				<swiper-item>
-					<view class="swiper-item">D</view>
-				</swiper-item>
-			</swiper>
-		</view> -->
 
 		<view class="share-container">
 			<view class="top-item">
 				<view class="left">
-					<text>趣事分享</text>
+					<text>热门看点</text>
 				</view>
 				<view class="right">
 					<text>查看更多  ></text>
@@ -202,7 +133,7 @@
 						<image style="width: 100%;height: 180rpx;" src="../../../static/images/home/ic_01.png" mode="aspectFill"></image>
 					</view>
 					<view class="center">
-						<text>刚好到这深圳湾，终于看到大海了海很蓝对面就是香港</text>
+						<text>请注意，这只是一个模板，这意味着这些话都是废话</text>
 					</view>
 					<view class="bottom">
 						<view class="left">
@@ -218,7 +149,6 @@
 		</view>
 		
 		<home-filter></home-filter>
-		<!-- <view style="height: 100rpx;"></view> -->
 		<view style="height: 50rpx;"></view>
 	</view>
 </template>
@@ -227,11 +157,44 @@
 	export default {
 		data() {
 			return {
+				iconNavList:[
+					{id:1,backgroundColor:'#FFD590',iconfont:'\ue74f',name:'在线测评',path:'online-evaluation/index'},
+					{id:2,backgroundColor:'#6ADFFB',iconfont:'\ue638',name:'心事问答',path:'../queAndAns/queAndAns'},
+					{id:3,backgroundColor:'#60F1DD',iconfont:'\ue6a1',name:'心理咨询',path:''},
+					{id:4,backgroundColor:'#FEAAA9',iconfont:'\ue602',name:'课程与服务',path:'../course/course'},
+					{id:5,backgroundColor:'#DBBEF9',iconfont:'\ue651',name:'趣味沙龙',path:'fun-salon/index'},
+					{id:6,backgroundColor:'#8DE4FB',iconfont:'\ue654',name:'心事分享',path:'mind-share/index'},
+				]
 			}
 		},
 		methods: {
+			// 打开心理咨询的popup
 			open(){
 				this.$refs.popup.open('center')
+			},
+			// 关闭心理咨询的popup
+			close() {
+				this.$refs.popup.close()
+			},
+			handleClick(item) {
+				let re = item.path.match(/[..]/)
+				if(re) {
+					uni.switchTab({
+						url:item.path
+					})
+				} else if(item.path){
+					uni.navigateTo({
+						url:item.path
+					})
+				} else {
+					this.open()
+				}
+			},
+			handlePopupClick(url) {
+				uni.navigateTo({
+					url:url
+				})
+				this.close()
 			}
 		}
 	}
@@ -251,7 +214,7 @@
 			box-sizing: border-box;
 			align-items: center;
 			.header_img{
-				image{
+				.img{
 					width: 100rpx;
 					height: 100rpx;
 					margin: 10rpx 10rpx 0 10rpx;
@@ -264,27 +227,16 @@
 				color: #fff;
 			}	
 		}
-		/* .header_main{
-			display: flex;
-			height: 320rpx;
-			margin: 20rpx 0;
-			justify-content: center;
-			.main-video{
-				height: 100%;
-				width: 100%;
-				background-color: red;
-			}
-		} */
 		
 		.header-swiper{
 			height: 330rpx;
-			background-color: #ddd;
+			// background-color: #ddd;
 			margin-top: 20rpx;
 			margin-bottom: 10rpx;
 			// display: flex;
 			.swiper{
 				height: 100%;
-				background-color: #bfc;
+				// background-color: #bfc;
 				.swiper-item{
 					height: 100%;
 					line-height: 330rpx;
@@ -337,18 +289,6 @@
 			}
 		}
 	}	
-	/* .msg{
-		height: 80rpx;
-		line-height: 80rpx;
-		display: flex;
-		margin-left: 30rpx;
-		margin-bottom: 15rpx;
-		font-size: 12px;
-		.tongzhi{
-			font-size: 28px;
-			color: #61B3A3;
-		}
-	} */
 	.msg{
 		height: 80rpx;
 		// background-color: #bac;
@@ -412,8 +352,6 @@
 		.nav_box{
 			width: 30%;
 			height: 200rpx;
-			// border: 1px solid gray;
-			// background-color: #ddd;
 			margin-top: 30rpx;
 			display: flex;
 			flex-direction: column;
@@ -431,27 +369,11 @@
 			}
 		}
 	}
-	/* .swiper_container{
-		width: 95%;
-		margin: 0 auto;
-		margin-top: 30rpx;
-		.swiper{
-			height: 350rpx;
-			text-align: center;
-			background-color: #bfc;
-			.swiper-item{
-				line-height: 350rpx;
-			}
-		}
-	} */
 	.share-container{
 		display: flex;
 		flex-direction: column;
 		justify-content: space-around;
-		// width: 90%;
-		// margin: 0 auto;
 		height: 450rpx;
-		// background-color: #ddd;
 		.top-item{
 			display: flex;
 			align-items: center;

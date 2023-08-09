@@ -1,0 +1,43 @@
+.container.data-v-c73ae8f2 {
+  width: 100%;
+  height: calc(100vh);
+  background-color: #EEEEEE;
+}
+.container .commit-box.data-v-c73ae8f2 {
+  width: 90%;
+  height: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 auto;
+}
+.container .commit-box .text.data-v-c73ae8f2 {
+  height: 80rpx;
+}
+.container .commit-box .input-box.data-v-c73ae8f2 {
+  background-color: #eee;
+  font-size: 14px;
+  padding: 0 20rpx;
+  color: #333;
+}
+.container .commit-box .input-box .input-title.data-v-c73ae8f2 {
+  height: 60rpx;
+  background-color: #fff;
+}
+.container .commit-box .input-box .input-content.data-v-c73ae8f2 {
+  margin-top: 1px;
+  background-color: #fff;
+  min-height: 450rpx;
+  width: 100%;
+}
+.container .commit-box .commit.data-v-c73ae8f2 {
+  height: 100rpx;
+  line-height: 100rpx;
+  text-align: center;
+  width: 80%;
+  margin: 0 auto;
+  border-radius: 15rpx;
+  background-color: #FEE9BC;
+  margin-top: 60rpx;
+}
+

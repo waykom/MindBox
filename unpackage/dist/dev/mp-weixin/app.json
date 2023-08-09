@@ -1,17 +1,32 @@
 {
   "pages": [
     "pages/tabBar/home/home",
+    "pages/tabBar/home/online-evaluation/index",
+    "pages/tabBar/home/online-evaluation/enter-test-page",
+    "pages/tabBar/home/online-evaluation/action-test-page",
+    "pages/tabBar/home/online-evaluation/test-result-page",
+    "pages/tabBar/home/counseling/counseling",
+    "pages/tabBar/home/counseling/consultant-detail",
+    "pages/tabBar/home/counseling/buy-success",
+    "pages/tabBar/home/counseling/hotline",
+    "pages/tabBar/home/fun-salon/index",
+    "pages/tabBar/home/fun-salon/detail",
+    "pages/tabBar/home/fun-salon/add-salon",
+    "pages/tabBar/home/mind-share/index",
     "pages/tabBar/queAndAns/queAndAns",
+    "pages/tabBar/queAndAns/ans-detail-page",
+    "pages/tabBar/queAndAns/ans-commit-page",
     "pages/tabBar/seek/seek",
     "pages/tabBar/course/course",
-    "pages/tabBar/user/user"
+    "pages/tabBar/user/user",
+    "pages/tabBar/course/detial"
   ],
   "subPackages": [],
   "window": {
     "navigationBarTextStyle": "black",
-    "navigationBarTitleText": "心事盒一让孤独的灵魂有处可栖",
-    "navigationBarBackgroundColor": "#F8F8F8",
-    "backgroundColor": "#F8F8F8"
+    "navigationBarTitleText": "心事盒",
+    "navigationBarBackgroundColor": "#fff",
+    "backgroundColor": "#fff"
   },
   "tabBar": {
     "color": "#333",
@@ -51,5 +66,6 @@
       }
     ]
   },
+  "lazyCodeLoading": "requiredComponents",
   "usingComponents": {}
 }

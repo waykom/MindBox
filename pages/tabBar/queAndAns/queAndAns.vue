@@ -1,8 +1,6 @@
 <template>
 	<view class="container">
-		<view class="search">
-			<input class="sinput" placeholder="搜索你疑惑的问题">
-		</view>
+		<top-search placeholder="搜索你疑惑的问题"></top-search>
 		<view class="hot-topic">
 			<view class="title">
 				<text>热门话题</text>
@@ -10,14 +8,14 @@
 			<view class="items-list">
 				<view class="item-box" v-for="(i,index) in 3" :key="index">
 					<view class="img">
-						<image style="width: 160rpx;height: 360rpx;" src="../../../static/images/home/ic_02.png" mode="aspectFit"></image>
+						<image style="width: 200rpx;height: 400rpx;" src="../../../static/images/home/ic_02.png" mode="aspectFit"></image>
 					</view>
 					<view class="content">
 						<view class="content-title">
 							<text>高频常见问题</text>
 						</view>
 						<view class="des">
-							<text>
+							<text class="des-text">
 								Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit, velit vero harum corporis quaerat minima distinctio itaque dolore? Cum et possimus, voluptatibus aliquid eveniet voluptatem velit quod quae? Placeat, voluptates!
 							</text>
 						</view>
@@ -42,15 +40,9 @@
 				</view>
 			</view>
 		</view>
-		<ul class="area-list">
-			<li v-for="(area,index) in areaList" 
-				:key="area.id"
-				@click="goArea(index)"
-				:class="areaIndex==index ? 'li-active' : ''"
-				>
-					{{ area.name }}
-			</li>
-		</ul>
+		
+		<nav-list :itemList="navList"></nav-list>
+		
 		<view class="discuss-box" v-for="i in 2" :key="i">
 			<view class="user">
 				<view class="left">
@@ -62,31 +54,37 @@
 					</view>
 				</view>
 				<view class="right">
-					<button plain>+ 关注</button>
+					<button class="rbtn" plain>+ 关注</button>
 				</view>
 			</view>
-			<view class="content">
-				<text>
-					一言有限公司成立于2013年04月19日，注册地位于福建省泉州市晋江市内坑镇上方村群峰路220号13楼，法定代表人为黄小豆。经营范围包括一般项目：以自有资金从事投资活动；货物进出口；技术进出口；进出口代理；国内货物运输代理；非金属矿及制品销售；矿山机械销售；鞋帽零售；鞋制造；矿物洗选加工；选矿；软件开发；科技中介服务；社会经济咨询服务（除依法须经批准的项目外，凭营业执照依法自主开展经营活动）一言有限公司对外投资4家公司。
+			<view class="content" @click="handleDetail">
+				<text class="ctext">
+					我是一个内向而不爱说话的人，最近我开始意识到这个特点对我的生活产生了一些影响。我不太善于在社交场合中与他人交流，经常觉得话题不知如何开展，也不知道该说什么。因此，我常常选择保持沉默，这让我感到有些尴尬和不自在。这种情况导致我很难结交新朋友，也感觉自己在社交活动中缺乏自信。
+					
+					我发现自己更愿意独处，沉浸在自己的世界中，思考和反思。虽然我很享受这种独立的感觉，但我也担心这样会让我与外界越来越疏离。我知道交流和社交对于人际关系的建立和维护非常重要，但我真的不太擅长。
+					
+					我很希望能够改变这种情况，更好地处理自己的内向特点，让自己在社交场合中更加自信和舒适。我想知道有没有什么方法可以帮助我主动参与社交，改善我与他人的交流，同时也尊重自己的内向需求。如果你们有类似的经历或有什么建议，希望能够分享给我。
+					
+					非常感谢！
 				</text>
 			</view>
 			<view class="operation">
-				<view>
+				<view class="opitem">
 					<text class="iconfont icon">&#xe623;</text>
-					<text>分享</text>
+					<text class="otext">分享</text>
 				</view>
-				<view>
+				<view class="opitem">
 					<text class="iconfont icon">&#xe636;</text>
-					<text>666</text>
+					<text class="otext">666</text>
 				</view>
-				<view>
+				<view class="opitem">
 					<text class="iconfont icon">&#xec7f;</text>
-					<text>666</text>
+					<text class="otext">666</text>
 				</view>
 			</view>
 		</view>
 		
-		<view class="commit-fix">
+		<view class="commit-fix" @click="handleCommit">
 			<text>提问</text>
 		</view>
 	</view>
@@ -96,8 +94,7 @@
 	export default {
 		data() {
 			return {
-				areaIndex:0,
-				areaList:[
+				navList:[
 					{id:1,name:'推荐'},
 					{id:2,name:'社会交际'},
 					{id:3,name:'个人成长'},
@@ -107,13 +104,20 @@
 					{id:7,name:'婚姻家庭'},
 					{id:8,name:'恋爱情感'},
 					{id:9,name:'婚姻家庭'}
-				],
+				]
 			};
 		},
-		methods: {
-			goArea(index){
-				this.areaIndex = index
+		methods:{
+			handleDetail() {
+				uni.navigateTo({
+					url:'ans-detail-page'
+				})
 			},
+			handleCommit() {
+				uni.navigateTo({
+					url:'ans-commit-page'
+				})
+			}
 		}
 	}
 </script>
@@ -121,24 +125,6 @@
 <style lang="less" scoped>
 .container{
 	width: 100%;
-	.search{
-		display: flex;
-		justify-content: center;
-		margin-top: 20rpx;
-		.sinput{
-			width: 85%;
-			box-sizing: border-box;
-			height: 80rpx;
-			padding-left: 28%;
-			color: #333;
-			border-radius: 20rpx;
-			background-color: #FAFAFA;
-			background-image: url('@/static/images/home/search.png');
-			background-repeat: no-repeat;
-			background-size: 5%;
-			background-position: 25% center;
-		}
-	}
 	.hot-topic {
 		display: flex;
 		flex-direction: column;
@@ -168,15 +154,20 @@
 				display: flex;
 				box-sizing: border-box;
 				justify-content: space-between;
+				// align-items: center;
 				width: 600rpx;
 				height: 400rpx;
 				border-radius: 15rpx;
 				border: 2px solid #F3D4B3;
 				.img{
-					// width: 200rpx;
+					width: 200rpx;
+					height: 100%;
+					border-radius: 10rpx;
+					overflow: hidden;
+					display: flex;
+					justify-content: center;
+					align-items: center;
 					background-color: #eee;
-					// box-sizing: border-box;
-					// padding: 20rpx;
 				}
 				.content{
 					width: 400rpx;
@@ -196,7 +187,7 @@
 						width: 100%;
 						font-size: 14px;
 						color: #666;
-						text{
+						.des-text{
 							display:-webkit-box;
 							-webkit-line-clamp:4;
 							-webkit-box-orient:vertical;
@@ -214,7 +205,6 @@
 						}
 					}
 					.save{
-						// width: 150rpx;
 						height: 50rpx;
 						line-height: 50rpx;
 						font-size: 10px;
@@ -226,34 +216,6 @@
 					}
 				}
 			}
-		}
-	}	
-	.area-list{
-		padding: 0;
-		margin: 0;
-		list-style: none;
-		height: 100rpx;
-		width: 95%;
-		margin: 0 auto;
-		// margin-top: 10rpx;
-		display: flex;
-		overflow: auto;
-		align-items: center;
-		text-align: center;
-		&::-webkit-scrollbar {
-			display: none;
-		}
-		li{
-			flex-shrink: 0;
-			// width: 150rpx;
-			margin: 0 20rpx;
-			color: #888;
-			font-size: 14px;
-			transition: all 0.1s linear;
-		}
-		.li-active{
-			font-size: 20px;
-			color: #333;
 		}
 	}
 	.discuss-box{
@@ -288,7 +250,7 @@
 				}
 			}
 			.right{
-				button{
+				.rbtn{
 					// width: 120rpx;
 					height: 55rpx;
 					line-height: 55rpx;
@@ -305,8 +267,9 @@
 			// background-color: #ddd;
 			max-height: 400rpx;
 			padding: 10rpx 5rpx;
-			color: #333;
-			text{
+			font-size: 14px;
+			color: #666;
+			.ctext{
 				display:-webkit-box;
 				-webkit-line-clamp:8;
 				-webkit-box-orient:vertical;
@@ -322,16 +285,16 @@
 			margin-top: 20rpx;
 			border-top: 1px solid #ddd;
 			border-bottom: 10px solid #F7F8FC;
-			view{
+			.opitem{
 				display: flex;
 				align-items: center;
-				text {
-					font-size: 10px;
-					color: #666;
-				}
 				.icon{
 					margin-right: 10rpx;
 					font-size: 16px;
+				}
+				.otext {
+					font-size: 10px;
+					color: #666;
 				}
 			}
 		}

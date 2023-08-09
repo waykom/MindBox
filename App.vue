@@ -14,7 +14,7 @@
 
 <style>
 	/*每个页面公共css */
-/* @import 'vant/lib/index.css'; */
+/* @import '~@/wxcomponents/vant-weapp/dist/common/index.wxss'; */
 
 @font-face {
   font-family: 'iconfont';
@@ -28,6 +28,17 @@
   font-style: normal;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+// 自定义小标题下划线
+.custom-underline {
+	height: 55rpx;
+	/* width: 200rpx; */
+	box-sizing: border-box;
+	font-size: 20px;
+	font-weight: 600;
+	border-bottom: 25rpx solid #F3D4B3;
+	border-radius: 10rpx;
 }
 
 /* #ifdef APP-PLUS  || H5*/

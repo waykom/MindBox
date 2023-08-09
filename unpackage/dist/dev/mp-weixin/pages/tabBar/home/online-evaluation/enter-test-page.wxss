@@ -1,0 +1,69 @@
+.container {
+  width: 100%;
+}
+.container .main-img {
+  width: 100%;
+  height: 420rpx;
+  background-color: #eee;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container .main {
+  height: 220rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.container .count {
+  width: 94%;
+  margin: 0 auto;
+  height: 100rpx;
+  font-size: 12px;
+  color: #666;
+  display: flex;
+  justify-content: space-between;
+}
+.container .content {
+  width: 94%;
+  margin: 0 auto;
+  font-size: 14px;
+  color: #444;
+  line-height: 45rpx;
+}
+.container .msg {
+  width: 94%;
+  margin: 0 auto;
+  height: 100rpx;
+  line-height: 100rpx;
+  font-size: 14px;
+  color: #444;
+}
+.container .bottom-box {
+  width: 100%;
+  height: 100rpx;
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+}
+.container .bottom-box .bleft {
+  flex: 3;
+  height: 80rpx;
+  line-height: 80rpx;
+  display: flex;
+  color: #666;
+}
+.container .bottom-box .bright {
+  flex: 4;
+  height: 100%;
+}
+.container .bottom-box .bright .btn {
+  height: 100rpx;
+  line-height: 100rpx;
+  border-radius: 20rpx;
+  background-color: #F3D4B3;
+  border: none;
+}
+

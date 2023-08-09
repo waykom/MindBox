@@ -12,23 +12,18 @@
 				<text>{{ item.name }}</text>
 			</view>
 		</view>
-		<ul class="area-list">
-			<li v-for="(area,index) in areaList" 
-				:key="area.id"
-				@click="goArea(index)"
-				:class="areaIndex==index ? 'li-active' : ''"
-				>
-					{{ area.name }}
-			</li>
-		</ul>
 		
-		<view class="course-box" v-for="i in 3" :key="i">
+		<nav-list :itemList="itemList[navIndex]"></nav-list>
+		
+		<view class="course-box" v-for="i in 3" :key="i" @click="goDetail">
 			<view class="c-left">
 				<image style="width: 200rpx;height: 230rpx;" src="../../../static/images/home/ic_02.png" mode="aspectFit"></image>
 			</view>
 			<view class="c-right">
 				<view class="c-title">
-					<text>重新定义你的认识 | 欧文亚龙团体05期</text>
+					<text>
+						重新定义你的认识 | 欧文亚龙团体05期
+					</text>
 				</view>
 				<view class="c-dec">
 					<text>8人小组，8月8日起，每周二晚19：00开始讲课，敬请期待！	</text>
@@ -57,17 +52,36 @@
 					{id:2,name:'企事业EAP项目'},
 					{id:3,name:'咨询师培训'},
 				],
-				areaIndex:0,
-				areaList:[
-					{id:1,name:'全国'},
-					{id:2,name:'深圳'},
-					{id:3,name:'广州'},
-					{id:4,name:'哈尔滨'},
-					{id:5,name:'内蒙古'},
-					{id:6,name:'武汉'},
-					{id:7,name:'成都'},
-					{id:8,name:'重庆'},
-					{id:9,name:'大理'}
+				itemList: [
+					[
+						{id:1,name:'全国'},
+						{id:2,name:'深圳'},
+						{id:3,name:'广州'},
+						{id:4,name:'哈尔滨'},
+						{id:5,name:'内蒙古'},
+						{id:6,name:'武汉'},
+						{id:7,name:'成都'},
+						{id:8,name:'重庆'},
+						{id:9,name:'大理'}
+					],
+					[
+						{id:1,name:'综合'},
+						{id:2,name:'类别'},
+						{id:3,name:'招募'},
+						{id:4,name:'团建'},
+						{id:5,name:'联谊'}
+					],
+					[
+						{id:1,name:'全国'},
+						{id:2,name:'深圳'},
+						{id:3,name:'广州'},
+						{id:4,name:'哈尔滨'},
+						{id:5,name:'内蒙古'},
+						{id:6,name:'武汉'},
+						{id:7,name:'成都'},
+						{id:8,name:'重庆'},
+						{id:9,name:'大理'}
+					]
 				],
 			};
 		},
@@ -75,9 +89,11 @@
 			goNav(index) {
 				this.navIndex = index
 			},
-			goArea(index){
-				this.areaIndex = index
-			},
+			goDetail() {
+				uni.navigateTo({
+					url:'/pages/tabBar/course/detial'+'?title='+'重新定义你的认识 | 欧文亚龙团体05期',
+				})
+			}
 		}
 	}
 </script>
@@ -137,7 +153,7 @@
 		&::-webkit-scrollbar {
 			display: none;
 		}
-		li{
+		.area-list-li{
 			flex-shrink: 0;
 			// width: 150rpx;
 			margin: 0 20rpx;

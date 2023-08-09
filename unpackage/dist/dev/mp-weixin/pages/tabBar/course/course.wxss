@@ -50,7 +50,7 @@
 .container .area-list.data-v-cb3c9d12::-webkit-scrollbar {
   display: none;
 }
-.container .area-list ._li.data-v-cb3c9d12 {
+.container .area-list .area-list-li.data-v-cb3c9d12 {
   flex-shrink: 0;
   margin: 0 20rpx;
   color: #888;

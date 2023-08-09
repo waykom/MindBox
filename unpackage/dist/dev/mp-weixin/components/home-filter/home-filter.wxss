@@ -13,7 +13,7 @@
 .filter-container .area-list.data-v-83c7185c::-webkit-scrollbar {
   display: none;
 }
-.filter-container .area-list ._li.data-v-83c7185c {
+.filter-container .area-list .area-list-li.data-v-83c7185c {
   flex-shrink: 0;
   margin: 0 20rpx;
   color: #888;

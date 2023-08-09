@@ -101,10 +101,10 @@ var components
 try {
   components = {
     uniPopup: function () {
-      return __webpack_require__.e(/*! import() | uni_modules/uni-popup/components/uni-popup/uni-popup */ "uni_modules/uni-popup/components/uni-popup/uni-popup").then(__webpack_require__.bind(null, /*! @/uni_modules/uni-popup/components/uni-popup/uni-popup.vue */ 74))
+      return __webpack_require__.e(/*! import() | uni_modules/uni-popup/components/uni-popup/uni-popup */ "uni_modules/uni-popup/components/uni-popup/uni-popup").then(__webpack_require__.bind(null, /*! @/uni_modules/uni-popup/components/uni-popup/uni-popup.vue */ 190))
     },
     homeFilter: function () {
-      return __webpack_require__.e(/*! import() | components/home-filter/home-filter */ "components/home-filter/home-filter").then(__webpack_require__.bind(null, /*! @/components/home-filter/home-filter.vue */ 81))
+      return __webpack_require__.e(/*! import() | components/home-filter/home-filter */ "components/home-filter/home-filter").then(__webpack_require__.bind(null, /*! @/components/home-filter/home-filter.vue */ 197))
     },
   }
 } catch (e) {
@@ -161,7 +161,7 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-
+/* WEBPACK VAR INJECTION */(function(uni) {
 
 Object.defineProperty(exports, "__esModule", {
   value: true
@@ -322,75 +322,81 @@ exports.default = void 0;
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 var _default = {
   data: function data() {
-    return {};
+    return {
+      iconNavList: [{
+        id: 1,
+        backgroundColor: '#FFD590',
+        iconfont: "\uE74F",
+        name: '在线测评',
+        path: 'online-evaluation/index'
+      }, {
+        id: 2,
+        backgroundColor: '#6ADFFB',
+        iconfont: "\uE638",
+        name: '心事问答',
+        path: '../queAndAns/queAndAns'
+      }, {
+        id: 3,
+        backgroundColor: '#60F1DD',
+        iconfont: "\uE6A1",
+        name: '心理咨询',
+        path: ''
+      }, {
+        id: 4,
+        backgroundColor: '#FEAAA9',
+        iconfont: "\uE602",
+        name: '课程与服务',
+        path: '../course/course'
+      }, {
+        id: 5,
+        backgroundColor: '#DBBEF9',
+        iconfont: "\uE651",
+        name: '趣味沙龙',
+        path: 'fun-salon/index'
+      }, {
+        id: 6,
+        backgroundColor: '#8DE4FB',
+        iconfont: "\uE654",
+        name: '心事分享',
+        path: 'mind-share/index'
+      }]
+    };
   },
   methods: {
+    // 打开心理咨询的popup
     open: function open() {
       this.$refs.popup.open('center');
+    },
+    // 关闭心理咨询的popup
+    close: function close() {
+      this.$refs.popup.close();
+    },
+    handleClick: function handleClick(item) {
+      var re = item.path.match(/[..]/);
+      if (re) {
+        uni.switchTab({
+          url: item.path
+        });
+      } else if (item.path) {
+        uni.navigateTo({
+          url: item.path
+        });
+      } else {
+        this.open();
+      }
+    },
+    handlePopupClick: function handlePopupClick(url) {
+      uni.navigateTo({
+        url: url
+      });
+      this.close();
     }
   }
 };
 exports.default = _default;
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
 
 /***/ }),
 

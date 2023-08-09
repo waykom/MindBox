@@ -6,9 +6,9 @@
     },
     "setting": {
         "urlCheck": false,
-        "es6": false,
-        "postcss": false,
-        "minified": false,
+        "es6": true,
+        "postcss": true,
+        "minified": true,
         "newFeature": true,
         "bigPackageSizeSupport": true,
         "babelSetting": {
@@ -18,7 +18,7 @@
         }
     },
     "compileType": "miniprogram",
-    "libVersion": "2.33.0",
+    "libVersion": "3.0.0",
     "appid": "wx6c584215ddc03a18",
     "projectname": "MindBox",
     "condition": {},

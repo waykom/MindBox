@@ -1,0 +1,1 @@
+<view><nav-list vue-id="4862747f-1" itemList="{{navList}}" bind:__l="__l"></nav-list><block wx:for="{{3}}" wx:for-item="i" wx:for-index="index" wx:key="index"><consultant bindtap="__e" vue-id="{{'4862747f-2-'+index}}" data-event-opts="{{[['tap',[['handleDetail',['$event']]]]]}}" bind:__l="__l"></consultant></block></view>

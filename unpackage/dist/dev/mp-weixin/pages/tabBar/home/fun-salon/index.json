@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "趣味沙龙",
+  "enablePullDownRefresh": false,
+  "usingComponents": {
+    "nav-list": "/components/nav-list/nav-list"
+  }
+}
