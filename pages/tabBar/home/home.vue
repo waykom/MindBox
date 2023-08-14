@@ -48,7 +48,7 @@
 							<text style="font-size: 12px;margin-left: 20rpx; color: #9d9d9d;">专属咨询师</text>
 						</view>
 					</view>
-					<view style="align-items: center;display: flex;">
+					<view @click="goChainStore" style="align-items: center;display: flex;">
 						<view style="width: 50rpx;height: 50rpx;border-radius: 50%;background-color: #FFF0D9; text-align: center;">
 							<image style="width: 40rpx;height: 40rpx;margin-top: 4rpx;" src="../../../static/images/home/shore.png" mode="scaleToFill"></image>
 						</view>
@@ -195,6 +195,12 @@
 					url:url
 				})
 				this.close()
+			},
+			// 全国连锁链接
+			goChainStore() {
+				uni.navigateTo({
+					url: 'chain-store/chain-store'
+				})
 			}
 		}
 	}

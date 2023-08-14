@@ -1,6 +1,8 @@
 {
   "pages": [
     "pages/tabBar/home/home",
+    "pages/tabBar/home/chain-store/chain-store",
+    "pages/tabBar/home/chain-store/studio-detail",
     "pages/tabBar/home/online-evaluation/index",
     "pages/tabBar/home/online-evaluation/enter-test-page",
     "pages/tabBar/home/online-evaluation/action-test-page",
@@ -13,12 +15,16 @@
     "pages/tabBar/home/fun-salon/detail",
     "pages/tabBar/home/fun-salon/add-salon",
     "pages/tabBar/home/mind-share/index",
+    "pages/tabBar/home/mind-share/article-detail",
+    "pages/tabBar/home/mind-share/hot-video-detail",
+    "pages/tabBar/home/mind-share/photo-detail",
     "pages/tabBar/queAndAns/queAndAns",
     "pages/tabBar/queAndAns/ans-detail-page",
     "pages/tabBar/queAndAns/ans-commit-page",
     "pages/tabBar/seek/seek",
     "pages/tabBar/course/course",
     "pages/tabBar/user/user",
+    "pages/tabBar/user/test-login",
     "pages/tabBar/course/detial"
   ],
   "subPackages": [],

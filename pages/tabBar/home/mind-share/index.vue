@@ -26,7 +26,7 @@
 				</view>
 			</view>
 			<view class="article-list">
-				<view class="article" v-for="i in 4" :key="i">
+				<view class="article" @click="handleArticleDetail" v-for="i in 4" :key="i">
 					<view class="up">
 						<view class="left">
 							<view class="title">
@@ -68,7 +68,7 @@
 		
 		<template v-else-if="currentItem.id==2">
 			<view class="hot-video">
-				<view class="hot-video-box" v-for="i in 4" :key="i">
+				<view @click="handlerHotVideoDetail" class="hot-video-box" v-for="i in 4" :key="i">
 					<view class="hvideo">
 						<view class="djfkds">
 							<!-- width: 240rpx;
@@ -103,7 +103,7 @@
 		
 		<template v-else>
 			<view class="good-img-container">
-				<view class="good-img-box" v-for="i in 3" :key="i">
+				<view class="good-img-box" @click="handlerPhotoDetail" v-for="i in 3" :key="i">
 					<view class="user-info">
 						<view class="user-profile">
 							<!-- 100 -->
@@ -173,9 +173,26 @@
 			this.currentItem = this.navList[0]
 		},
 		methods:{
+			// 点击顶部导航栏 切换内容
 			change(item) {
 				this.currentItem = item
+			},
+			handleArticleDetail() {
+				uni.navigateTo({
+					url: 'article-detail'
+				})
+			},
+			handlerHotVideoDetail() {
+				uni.navigateTo({
+					url: 'hot-video-detail'
+				})
+			},
+			handlerPhotoDetail() {
+				uni.navigateTo({
+					url: 'photo-detail'
+				})
 			}
+			
 		}
 	}
 </script>
@@ -342,6 +359,7 @@
 			// background-color: #ddd;
 			.user-info{
 				display: flex;
+				justify-content: space-between;
 				align-items: center;
 				height: 120rpx;
 				.user-profile{
@@ -357,11 +375,17 @@
 				.user-msg{
 					margin-left: 20rpx;
 					font-size: 14px;
+					flex: 1;
+					// background-color: #bfc;
 					.user-name{
 						// background-color: #26A1FF;
 						height: 50rpx;
 						display: flex;
 						align-items: center;
+						.a{
+							// width: 100rpx;
+							// background-color: #ddd;
+						}
 						.b{
 							margin: 0 10rpx;
 							width: 30rpx;
@@ -390,7 +414,7 @@
 					}
 				}
 				.follow{
-					margin-left: 300rpx;
+					// margin-left: 300rpx;
 					width: 120rpx;
 					display: flex;
 					align-items: center;

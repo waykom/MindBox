@@ -17,7 +17,7 @@
 		
 		<view class="course-box" v-for="i in 3" :key="i" @click="goDetail">
 			<view class="c-left">
-				<image style="width: 200rpx;height: 230rpx;" src="../../../static/images/home/ic_02.png" mode="aspectFit"></image>
+				<image style="width: 200rpx;height: 230rpx;" src="@/static/images/home/ic_02.png" mode="aspectFit"></image>
 			</view>
 			<view class="c-right">
 				<view class="c-title">

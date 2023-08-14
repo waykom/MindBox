@@ -1,0 +1,83 @@
+.review-container {
+  width: 100%;
+  margin: 20rpx auto;
+}
+.review-container .text-fixed {
+  padding-left: 30rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+  border-bottom: 1px solid #ddd;
+}
+.review-container .review-list {
+  width: 94%;
+  margin: 30rpx auto;
+}
+.review-container .review-list .review-box {
+  margin-top: 30rpx;
+}
+.review-container .review-list .review-box .rtop {
+  height: 100rpx;
+  display: flex;
+  align-items: center;
+}
+.review-container .review-list .review-box .rtop .profile {
+  width: 80rpx;
+  height: 80rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border-radius: 50%;
+  background-color: #bfc;
+}
+.review-container .review-list .review-box .rtop .uinfo {
+  flex: 1;
+  margin-left: 20rpx;
+}
+.review-container .review-list .review-box .rtop .uinfo .uname {
+  font-size: 14px;
+}
+.review-container .review-list .review-box .rtop .uinfo .stime {
+  font-size: 10px;
+  color: #666;
+}
+.review-container .review-list .review-box .rtop .like {
+  display: flex;
+  align-items: center;
+  font-size: 10px;
+  color: #666;
+}
+.review-container .review-list .review-box .rcontent {
+  font-size: 14px;
+  color: #333;
+  margin-left: 100rpx;
+}
+.review-container .review-list .review-box .talk {
+  margin-top: 20rpx;
+  margin-left: 100rpx;
+  font-size: 10px;
+  color: #666;
+  background-color: #F6F6F6;
+  padding: 10rpx;
+}
+.review-container .review-list .review-box .talk .more-talker {
+  margin-top: 10rpx;
+  color: #179570;
+}
+.review-container .showmore {
+  height: 50rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #179570;
+  font-size: 12px;
+  border-top: 1px solid #ddd;
+}
+.review-container .mytalk {
+  height: 100rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #FEE9BC;
+}
+

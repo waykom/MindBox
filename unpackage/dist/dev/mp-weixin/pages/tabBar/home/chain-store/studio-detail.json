@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "工作室详情",
+  "enablePullDownRefresh": false,
+  "usingComponents": {
+    "consultant": "/components/consultant/consultant"
+  }
+}

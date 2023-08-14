@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "图片详情",
+  "enablePullDownRefresh": false,
+  "usingComponents": {
+    "review-container": "/components/review-container/review-container"
+  }
+}

@@ -1,0 +1,153 @@
+.container.data-v-fa18fdf4 {
+  width: 100%;
+}
+.container .img.data-v-fa18fdf4 {
+  height: 480rpx;
+  background-color: #bfc;
+}
+.container .main1.data-v-fa18fdf4 {
+  width: 90%;
+  margin: 0 auto;
+}
+.container .main1 .studio-name.data-v-fa18fdf4 {
+  font-size: 16px;
+  font-weight: bold;
+  margin-top: 30rpx;
+}
+.container .main1 .worktime.data-v-fa18fdf4 {
+  font-size: 10px;
+  margin: 6px 0 10px 0;
+  color: #666;
+}
+.container .main1 .contact-box.data-v-fa18fdf4 {
+  color: #555;
+  font-size: 12px;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 4px;
+}
+.container .main1 .contact-box .icon.data-v-fa18fdf4 {
+  width: 100rpx;
+  text-align: center;
+  color: #F3D4B3;
+  border-left: 1px solid #F3D4B3;
+}
+.container .main2.data-v-fa18fdf4 {
+  width: 90%;
+  margin: 0 auto;
+}
+.container .main2 .nav-fixed.data-v-fa18fdf4 {
+  height: 100rpx;
+  display: flex;
+  align-items: center;
+  margin-top: 20rpx;
+  justify-content: space-around;
+}
+.container .main2 .nav-fixed .nav-box.data-v-fa18fdf4 {
+  box-sizing: border-box;
+  font-size: 16px;
+}
+.container .main2 .nav-fixed .nav-box-avtive.data-v-fa18fdf4 {
+  height: 45rpx;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 10rpx;
+  border-bottom: 8px solid #F3D4B3;
+}
+.container .router-view .introduce.data-v-fa18fdf4 {
+  width: 90%;
+  margin: 10rpx auto;
+  font-size: 14px;
+  color: #333;
+  line-height: 28px;
+}
+.container .router-view .course-box.data-v-fa18fdf4 {
+  display: flex;
+  height: 300rpx;
+  width: 96%;
+  margin: 0 auto;
+  justify-content: space-around;
+  align-items: center;
+}
+.container .router-view .course-box .c-left.data-v-fa18fdf4 {
+  width: 200rpx;
+  border-radius: 20rpx;
+  background-color: #F3D4B3;
+  position: relative;
+}
+.container .router-view .course-box .c-left.data-v-fa18fdf4::after {
+  content: '报名中';
+  display: block;
+  color: white;
+  font-size: 14px;
+  background-color: #FF6134;
+  height: 50rpx;
+  line-height: 50rpx;
+  width: 100%;
+  text-align: center;
+  position: absolute;
+  bottom: 0;
+  border-radius: 0 0 20rpx 20rpx;
+}
+.container .router-view .course-box .c-right.data-v-fa18fdf4 {
+  width: 500rpx;
+  height: 250rpx;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.container .router-view .course-box .c-right .c-title.data-v-fa18fdf4 {
+  font-size: 16px;
+  font-weight: bold;
+}
+.container .router-view .course-box .c-right .c-dec.data-v-fa18fdf4 {
+  font-size: 14px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.container .router-view .course-box .c-right .c-info.data-v-fa18fdf4 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 30rpx;
+  font-size: 12px;
+}
+.container .router-view .li-box.data-v-fa18fdf4 {
+  height: 250rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.container .router-view .li-box .li-img-container.data-v-fa18fdf4 {
+  width: 230rpx;
+  height: 200rpx;
+  flex-shrink: 0;
+  border-radius: 20rpx;
+  background-color: #bfc;
+}
+.container .router-view .li-box .li-content.data-v-fa18fdf4 {
+  height: 70%;
+  margin-left: 40rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.container .router-view .li-box .li-content .li-title.data-v-fa18fdf4 {
+  font-size: 14px;
+}
+.container .router-view .li-box .li-content .li-time.data-v-fa18fdf4 {
+  font-size: 10px;
+  color: #666;
+}
+.container .router-view .li-box .li-content .li-time .week.data-v-fa18fdf4 {
+  margin: 0 10rpx;
+}
+.container .router-view .li-box .li-content .li-area.data-v-fa18fdf4 {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  color: #666;
+}
+

@@ -145,6 +145,7 @@
 }
 .container .good-img-container .good-img-box .user-info {
   display: flex;
+  justify-content: space-between;
   align-items: center;
   height: 120rpx;
 }
@@ -161,6 +162,7 @@
 .container .good-img-container .good-img-box .user-info .user-msg {
   margin-left: 20rpx;
   font-size: 14px;
+  flex: 1;
 }
 .container .good-img-container .good-img-box .user-info .user-msg .user-name {
   height: 50rpx;
@@ -193,7 +195,6 @@
   color: #666;
 }
 .container .good-img-container .good-img-box .user-info .follow {
-  margin-left: 300rpx;
   width: 120rpx;
   display: flex;
   align-items: center;

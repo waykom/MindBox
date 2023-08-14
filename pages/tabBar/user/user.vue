@@ -4,7 +4,7 @@
 			<view class="title">
 				<text>个人中心</text>
 			</view>
-			<view class="user-info">
+			<view class="user-info"  @click="handlerLogin">
 				<view class="img">
 					<image style="width: 100rpx;height: 100rpx;" src="@/static/images/icon/tabBar/user.png" mode="aspectFit"></image>
 				</view>
@@ -106,14 +106,14 @@
 			return{
 				// 常用功能
 				commonUseList:[
-					{id:1,name:'我的关注',icon:'\uec7f',to:''},
-					{id:2,name:'我的测评',icon:'\uec7f',to:''},
-					{id:3,name:'我的提问',icon:'\uec7f',to:''},
-					{id:4,name:'我的发布',icon:'\uec7f',to:''},
-					{id:5,name:'在线客服',icon:'\uec7f',to:''},
-					{id:6,name:'个人信息',icon:'\uec7f',to:''},
-					{id:7,name:'咨询师入驻',icon:'\uec7f',to:''},
-					{id:8,name:'条款',icon:'\uec7f',to:''},
+					{id:1,name:'我的关注',icon:'\ue694',to:''},
+					{id:2,name:'我的测评',icon:'\ue654',to:''},
+					{id:3,name:'我的提问',icon:'\ue7bf',to:''},
+					{id:4,name:'我的发布',icon:'\uec09',to:''},
+					{id:5,name:'在线客服',icon:'\uec2e',to:''},
+					{id:6,name:'个人信息',icon:'\ue659',to:''},
+					{id:7,name:'咨询师入驻',icon:'\ue69c',to:''},
+					{id:8,name:'条款',icon:'\ue608',to:''},
 				]
 			}
 		},
@@ -122,6 +122,11 @@
 				console.log('jjjj',e)
 				uni.showToast({
 					title:'点击反馈'
+				})
+			},
+			handlerLogin() {
+				uni.navigateTo({
+					url: 'test-login'
 				})
 			}
 		}

@@ -1,29 +1,40 @@
 {
-    "description": "项目配置文件。",
-    "packOptions": {
-        "ignore": [],
-        "include": []
+  "description": "项目配置文件。",
+  "packOptions": {
+    "ignore": [],
+    "include": []
+  },
+  "setting": {
+    "urlCheck": false,
+    "es6": true,
+    "postcss": true,
+    "minified": true,
+    "newFeature": true,
+    "bigPackageSizeSupport": true,
+    "babelSetting": {
+      "ignore": [],
+      "disablePlugins": [],
+      "outputPath": ""
     },
-    "setting": {
-        "urlCheck": false,
-        "es6": true,
-        "postcss": true,
-        "minified": true,
-        "newFeature": true,
-        "bigPackageSizeSupport": true,
-        "babelSetting": {
-            "ignore": [],
-            "disablePlugins": [],
-            "outputPath": ""
+    "condition": false
+  },
+  "compileType": "miniprogram",
+  "libVersion": "",
+  "appid": "wx6c584215ddc03a18",
+  "projectname": "MindBox",
+  "condition": {
+    "miniprogram": {
+      "list": [
+        {
+          "name": "",
+          "pathName": "pages/tabBar/user/test-login",
+          "query": ""
         }
-    },
-    "compileType": "miniprogram",
-    "libVersion": "3.0.0",
-    "appid": "wx6c584215ddc03a18",
-    "projectname": "MindBox",
-    "condition": {},
-    "editorSetting": {
-        "tabIndent": "insertSpaces",
-        "tabSize": 4
+      ]
     }
+  },
+  "editorSetting": {
+    "tabIndent": "insertSpaces",
+    "tabSize": 2
+  }
 }
