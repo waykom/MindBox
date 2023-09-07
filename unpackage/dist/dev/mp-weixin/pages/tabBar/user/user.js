@@ -101,10 +101,13 @@ var components
 try {
   components = {
     uniList: function () {
-      return __webpack_require__.e(/*! import() | uni_modules/uni-list/components/uni-list/uni-list */ "uni_modules/uni-list/components/uni-list/uni-list").then(__webpack_require__.bind(null, /*! @/uni_modules/uni-list/components/uni-list/uni-list.vue */ 305))
+      return __webpack_require__.e(/*! import() | uni_modules/uni-list/components/uni-list/uni-list */ "uni_modules/uni-list/components/uni-list/uni-list").then(__webpack_require__.bind(null, /*! @/uni_modules/uni-list/components/uni-list/uni-list.vue */ 403))
     },
     uniListItem: function () {
-      return __webpack_require__.e(/*! import() | uni_modules/uni-list/components/uni-list-item/uni-list-item */ "uni_modules/uni-list/components/uni-list-item/uni-list-item").then(__webpack_require__.bind(null, /*! @/uni_modules/uni-list/components/uni-list-item/uni-list-item.vue */ 319))
+      return __webpack_require__.e(/*! import() | uni_modules/uni-list/components/uni-list-item/uni-list-item */ "uni_modules/uni-list/components/uni-list-item/uni-list-item").then(__webpack_require__.bind(null, /*! @/uni_modules/uni-list/components/uni-list-item/uni-list-item.vue */ 417))
+    },
+    uniPopup: function () {
+      return __webpack_require__.e(/*! import() | uni_modules/uni-popup/components/uni-popup/uni-popup */ "uni_modules/uni-popup/components/uni-popup/uni-popup").then(__webpack_require__.bind(null, /*! @/uni_modules/uni-popup/components/uni-popup/uni-popup.vue */ 334))
     },
   }
 } catch (e) {
@@ -269,30 +272,77 @@ exports.default = void 0;
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
 var _default = {
   data: function data() {
     return {
+      // 主要功能
+      mainList: [{
+        id: 1,
+        name: '我的余额',
+        number: 2137,
+        to: 'group-one/wodeyue'
+      }, {
+        id: 2,
+        name: '我的预约',
+        number: 1,
+        to: 'group-one/wodeyuyue'
+      }, {
+        id: 3,
+        name: '我的活动',
+        number: 0,
+        to: 'group-one/wodehuodong'
+      }, {
+        id: 4,
+        name: '我的收藏',
+        number: 9,
+        to: 'group-one/wodeshoucang'
+      }],
+      // 我的订单
+      orderList: [{
+        id: 1,
+        name: '待确认',
+        icon: "\uE613"
+      }, {
+        id: 2,
+        name: '服务中',
+        icon: "\uE644"
+      }, {
+        id: 3,
+        name: '已结束',
+        icon: "\uE607"
+      }, {
+        id: 4,
+        name: '已取消',
+        icon: "\uE647"
+      }],
       // 常用功能
       commonUseList: [{
         id: 1,
         name: '我的关注',
         icon: "\uE694",
-        to: ''
+        to: 'group-three/guanzhu'
       }, {
         id: 2,
         name: '我的测评',
         icon: "\uE654",
-        to: ''
+        to: 'group-three/wodeceping'
       }, {
         id: 3,
         name: '我的提问',
         icon: "\uE7BF",
-        to: ''
+        to: 'group-three/wodetiwen'
       }, {
         id: 4,
         name: '我的发布',
         icon: "\uEC09",
-        to: ''
+        to: 'group-three/wodefabu'
       }, {
         id: 5,
         name: '在线客服',
@@ -302,30 +352,39 @@ var _default = {
         id: 6,
         name: '个人信息',
         icon: "\uE659",
-        to: ''
+        to: 'group-three/gerenxinxi'
       }, {
         id: 7,
         name: '咨询师入驻',
         icon: "\uE69C",
-        to: ''
+        to: 'group-three/zixunshiruzhu'
       }, {
         id: 8,
         name: '条款',
         icon: "\uE608",
-        to: ''
+        to: 'group-three/tiaokuan'
       }]
     };
   },
   methods: {
-    onClick: function onClick(e) {
-      console.log('jjjj', e);
-      uni.showToast({
-        title: '点击反馈'
-      });
+    onClick: function onClick(id) {
+      if (id === 5) {
+        this.$refs.popup.open('center');
+      }
     },
     handlerLogin: function handlerLogin() {
       uni.navigateTo({
         url: 'test-login'
+      });
+    },
+    handleClickMyOption: function handleClickMyOption(path) {
+      uni.navigateTo({
+        url: path
+      });
+    },
+    handleClickOrderOption: function handleClickOrderOption(orderId) {
+      uni.navigateTo({
+        url: 'group-two/order' + '?orderId=' + orderId
       });
     }
   }

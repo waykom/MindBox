@@ -438,10 +438,10 @@ var components
 try {
   components = {
     uniPopup: function () {
-      return __webpack_require__.e(/*! import() | uni_modules/uni-popup/components/uni-popup/uni-popup */ "uni_modules/uni-popup/components/uni-popup/uni-popup").then(__webpack_require__.bind(null, /*! @/uni_modules/uni-popup/components/uni-popup/uni-popup.vue */ 236))
+      return __webpack_require__.e(/*! import() | uni_modules/uni-popup/components/uni-popup/uni-popup */ "uni_modules/uni-popup/components/uni-popup/uni-popup").then(__webpack_require__.bind(null, /*! @/uni_modules/uni-popup/components/uni-popup/uni-popup.vue */ 334))
     },
     prettyTimes: function () {
-      return Promise.all(/*! import() | components/pretty-times/pretty-times */[__webpack_require__.e("common/vendor"), __webpack_require__.e("components/pretty-times/pretty-times")]).then(__webpack_require__.bind(null, /*! @/components/pretty-times/pretty-times.vue */ 290))
+      return Promise.all(/*! import() | components/pretty-times/pretty-times */[__webpack_require__.e("common/vendor"), __webpack_require__.e("components/pretty-times/pretty-times")]).then(__webpack_require__.bind(null, /*! @/components/pretty-times/pretty-times.vue */ 388))
     },
   }
 } catch (e) {

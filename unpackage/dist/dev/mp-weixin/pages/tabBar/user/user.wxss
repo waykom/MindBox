@@ -135,4 +135,47 @@
   color: #000;
   margin-left: 30rpx;
 }
+.container .popup.data-v-4655f477 {
+  height: 430rpx;
+  width: 500rpx;
+  border-radius: 20rpx;
+  overflow: hidden;
+  background-color: #fff;
+}
+.container .popup .topicon.data-v-4655f477 {
+  height: 80rpx;
+  background-color: #73DBCC;
+}
+.container .popup .service-text.data-v-4655f477 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  font-size: 12px;
+  height: 200rpx;
+}
+.container .popup .options.data-v-4655f477 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  font-size: 14px;
+}
+.container .popup .options .call.data-v-4655f477 {
+  height: 50rpx;
+  width: 240rpx;
+  border-radius: 50rpx;
+  background-color: #F3D4B3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container .popup .options .exit.data-v-4655f477 {
+  height: 70rpx;
+  width: 200rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #F3D4B3;
+}
 

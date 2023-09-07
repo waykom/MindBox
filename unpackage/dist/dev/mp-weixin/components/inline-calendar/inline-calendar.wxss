@@ -5,7 +5,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: #f7f7f8;
+  background: #fff;
   height: 44px;
   font-size: 17px;
 }
@@ -40,7 +40,7 @@
   display: flex;
   box-sizing: border-box;
   font-size: 11px;
-  background: #f7f7f8;
+  background: #fff;
 }
 .m-calendar .m-week-header .m-week-day.data-v-320c5eea {
   flex: 1;
@@ -76,7 +76,6 @@
 .m-calendar .m-months-container .m-months-wrapper .m-months .m-row.data-v-320c5eea::before {
   content: '';
   position: absolute;
-  background-color: #ccc;
   display: block;
   right: 0;
   bottom: 0;
@@ -106,18 +105,18 @@
   color: #b8b8b8;
 }
 .m-calendar .m-months-container .m-months-wrapper .m-months .m-row .m-day .m-today.data-v-320c5eea {
-  background: #e3e3e3;
+  background: #FFE4E1;
 }
 .m-calendar .m-months-container .m-months-wrapper .m-months .m-row .m-day .m-disable.data-v-320c5eea {
   color: #b8b8b8;
   text-decoration: line-through;
 }
 .m-calendar .m-months-container .m-months-wrapper .m-months .m-row .m-day .m-select.data-v-320c5eea {
-  background: #007aff;
+  background: #FF6363;
   color: #fff;
 }
 .m-calendar .m-months-container .m-months-wrapper .m-months .m-row .m-day .m-during.data-v-320c5eea {
-  background: #007aff;
+  background: #FF6363;
   color: #fff;
   width: 100%;
   height: 100%;

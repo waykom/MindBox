@@ -191,6 +191,99 @@
 			}
 		},
 		{
+			"path": "pages/tabBar/user/group-one/wodeyue",
+			"style": {
+				"navigationBarTitleText": "我的余额",
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/tabBar/user/group-one/wodeyuyue",
+			"style": {
+				"navigationBarTitleText": "我的预约",
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/tabBar/user/group-one/wodehuodong",
+			"style": {
+				"navigationBarTitleText": "我的活动",
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/tabBar/user/group-one/wodeshoucang",
+			"style": {
+				"navigationBarTitleText": "我的收藏",
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/tabBar/user/group-two/order",
+			"style": {
+				"navigationBarTitleText": "我的订单",
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/tabBar/user/group-three/guanzhu",
+			"style": {
+				"navigationBarTitleText": "我的关注",
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/tabBar/user/group-three/wodeceping",
+			"style": {
+				"navigationBarTitleText": "我的测评",
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/tabBar/user/group-three/wodetiwen",
+			"style": {
+				"navigationBarTitleText": "我的提问",
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/tabBar/user/group-three/wodefabu",
+			"style": {
+				"navigationBarTitleText": "我的发布",
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/tabBar/user/group-three/zaixiankefu",
+			"style": {
+				"navigationBarTitleText": "在线客服",
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/tabBar/user/group-three/gerenxinxi",
+			"style": {
+				"navigationBarTitleText": "个人信息",
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/tabBar/user/group-three/zixunshiruzhu",
+			"style": {
+				"navigationBarTitleText": "咨询师入驻",
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/tabBar/user/group-three/tiaokuan",
+			"style": {
+				"navigationBarTitleText": "条约服务",
+				"enablePullDownRefresh": false,
+				"navigationBarTextStyle": "white",
+				"navigationBarBackgroundColor": "#B9C1FF"
+			}
+		},
+		{
 			"path": "pages/tabBar/user/test-login",
 			"style": {
 				"navigationBarTitleText": "用户登录",

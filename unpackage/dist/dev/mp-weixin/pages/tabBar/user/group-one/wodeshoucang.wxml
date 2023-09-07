@@ -1,0 +1,1 @@
+<view><nav-list vue-id="03e13b98-1" itemList="{{navList}}" bind:__l="__l"></nav-list></view>

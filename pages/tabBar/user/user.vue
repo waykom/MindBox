@@ -18,21 +18,12 @@
 				</view>
 			</view>
 			<view class="o-info">
-				<view class="info-item">
-					<text class="number">2173</text>
-					<text>我的余额</text>
-				</view>
-				<view class="info-item">
-					<text class="number">1</text>
-					<text>我的预约</text>
-				</view>
-				<view class="info-item">
-					<text class="number">0</text>
-					<text>我的活动</text>
-				</view>
-				<view class="info-item">
-					<text class="number">9</text>
-					<text>我的收藏</text>
+				<view class="info-item"
+					@click="handleClickMyOption(my.to)"
+					v-for="my in mainList" :key="my.id"
+				>
+					<text class="number">{{ my.number }}</text>
+					<text>{{ my.name }}</text>
 				</view>
 			</view>
 		</view>
@@ -47,25 +38,13 @@
 				</view>
 			</view>
 			<view class="cart-content">
-				<view class="cart-item">
-					<text class="iconfont icon">&#xe63a;</text>
-					<text class="ctext">全部</text>
-				</view>
-				<view class="cart-item">
-					<text class="iconfont icon">&#xe613;</text>
-					<text class="ctext">待确认</text>
-				</view>
-				<view class="cart-item">
-					<text class="iconfont icon">&#xe644;</text>
-					<text class="ctext">服务中</text>
-				</view>
-				<view class="cart-item">
-					<text class="iconfont icon">&#xe607;</text>
-					<text class="ctext">已结束</text>
-				</view>
-				<view class="cart-item">
-					<text class="iconfont icon">&#xe647;</text>
-					<text class="ctext">已取消</text>
+				<view 
+					class="cart-item"
+					@click="handleClickOrderOption(item.id)"
+					v-for="item in orderList" :key="item.id"
+				>
+					<text class="iconfont icon">{{ item.icon }}</text>
+					<text class="ctext">{{ item.name }}</text>
 				</view>
 			</view>
 		</view>
@@ -81,7 +60,7 @@
 					showArrow
 					clickable
 					:to="item.to"
-					@click="onClick"
+					@click="onClick(item.id)"
 					v-for="item in commonUseList" :key="item.id">
 					<template #header>
 						<view class="slot-box-header">
@@ -97,6 +76,34 @@
 				</uni-list-item>
 			</uni-list>
 		</view>
+	
+		<uni-popup ref="popup" type="center">
+			<view class="popup">
+				<view class="topicon">
+					
+				</view>
+				<view class="service-text">
+					<view>
+						<text>客服电话</text>
+					</view>
+					<view style="font-size: 14px;">
+						<text>110-110-10001</text>
+					</view>
+					<view style="font-size: 10px;color: #666;">
+						<text>客服24小时在线为您服务，如有需要请拨打</text>
+					</view>
+				</view>
+				<view class="options">
+					<view class="call">
+						<text>立即拨打</text>
+					</view>
+					<view class="exit">
+						<text>取消</text>
+					</view>
+				</view>
+			</view>
+		</uni-popup>
+	
 	</view>
 </template>
 
@@ -104,29 +111,52 @@
 	export default {
 		data(){
 			return{
+				// 主要功能
+				mainList:[
+					{id:1, name:'我的余额', number:2137, to:'group-one/wodeyue'},
+					{id:2, name:'我的预约', number:1, to:'group-one/wodeyuyue'},
+					{id:3, name:'我的活动', number:0, to:'group-one/wodehuodong'},
+					{id:4, name:'我的收藏', number:9, to:'group-one/wodeshoucang'},
+				],
+				// 我的订单
+				orderList:[
+					{id:1,name:'待确认',icon:'\ue613'},
+					{id:2,name:'服务中',icon:'\ue644'},
+					{id:3,name:'已结束',icon:'\ue607'},
+					{id:4,name:'已取消',icon:'\ue647'},
+				],
 				// 常用功能
 				commonUseList:[
-					{id:1,name:'我的关注',icon:'\ue694',to:''},
-					{id:2,name:'我的测评',icon:'\ue654',to:''},
-					{id:3,name:'我的提问',icon:'\ue7bf',to:''},
-					{id:4,name:'我的发布',icon:'\uec09',to:''},
+					{id:1,name:'我的关注',icon:'\ue694',to:'group-three/guanzhu'},
+					{id:2,name:'我的测评',icon:'\ue654',to:'group-three/wodeceping'},
+					{id:3,name:'我的提问',icon:'\ue7bf',to:'group-three/wodetiwen'},
+					{id:4,name:'我的发布',icon:'\uec09',to:'group-three/wodefabu'},
 					{id:5,name:'在线客服',icon:'\uec2e',to:''},
-					{id:6,name:'个人信息',icon:'\ue659',to:''},
-					{id:7,name:'咨询师入驻',icon:'\ue69c',to:''},
-					{id:8,name:'条款',icon:'\ue608',to:''},
+					{id:6,name:'个人信息',icon:'\ue659',to:'group-three/gerenxinxi'},
+					{id:7,name:'咨询师入驻',icon:'\ue69c',to:'group-three/zixunshiruzhu'},
+					{id:8,name:'条款',icon:'\ue608',to:'group-three/tiaokuan'},
 				]
 			}
 		},
 		methods:{
-			onClick(e){
-				console.log('jjjj',e)
-				uni.showToast({
-					title:'点击反馈'
-				})
+			onClick(id){
+				if(id === 5) {
+					this.$refs.popup.open('center')
+				}
 			},
 			handlerLogin() {
 				uni.navigateTo({
 					url: 'test-login'
+				})
+			},
+			handleClickMyOption(path) {
+				uni.navigateTo({
+					url: path
+				})
+			},
+			handleClickOrderOption(orderId) {
+				uni.navigateTo({
+					url: 'group-two/order'+'?orderId='+orderId
 				})
 			}
 		}
@@ -281,6 +311,50 @@
 				font-size: 14px;
 				color: #000;
 				margin-left: 30rpx;
+			}
+		}
+	}
+	.popup {
+		height: 430rpx;
+		width: 500rpx;
+		border-radius: 20rpx;
+		overflow: hidden;
+		background-color: #fff;
+		.topicon{
+			height: 80rpx;
+			background-color: #73DBCC;
+		}
+		.service-text{
+			display: flex;
+			flex-direction: column;
+			justify-content: space-evenly;
+			align-items: center;
+			font-size: 12px;
+			height: 200rpx;
+			// background-color: #ddd;
+		}
+		.options{
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: space-evenly;
+			font-size: 14px;
+			.call{
+				height: 50rpx;
+				width: 240rpx;
+				border-radius: 50rpx;
+				background-color: #F3D4B3;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+			}
+			.exit{
+				height: 70rpx;
+				width: 200rpx;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				color: #F3D4B3;
 			}
 		}
 	}

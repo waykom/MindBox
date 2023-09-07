@@ -1,0 +1,40 @@
+.container.data-v-30561141 {
+  width: 100%;
+  height: 100vh;
+  background-color: #F8F8F8;
+}
+.container .box.data-v-30561141 {
+  width: 94%;
+  border-radius: 10rpx;
+  margin: 0rpx auto;
+  margin-bottom: 20rpx;
+  -webkit-transform: translateY(20rpx);
+          transform: translateY(20rpx);
+  background-color: #fff;
+  padding-left: 40rpx;
+  padding-bottom: 50rpx;
+  box-sizing: border-box;
+}
+.container .box .title.data-v-30561141 {
+  height: 100rpx;
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+}
+.container .box .title .icon.data-v-30561141 {
+  font-size: 20px;
+  color: #F3D4B3;
+  margin-right: 20rpx;
+}
+.container .box .keyvalue.data-v-30561141 {
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+  line-height: 60rpx;
+  padding-left: 20rpx;
+}
+.container .box .keyvalue .key.data-v-30561141 {
+  color: #666;
+  width: 200rpx;
+}
+

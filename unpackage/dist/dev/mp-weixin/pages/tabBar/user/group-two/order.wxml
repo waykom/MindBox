@@ -1,0 +1,1 @@
+<view><nav-list vue-id="ce313db6-1" itemList="{{orderList}}" bind:__l="__l"></nav-list><view class="none"><view><image style=";" src="/static/images/user/order-none.png" mode="aspectFit"></image></view><view class="none-text"><text>亲，您还没有相关的订单哟~</text></view></view></view>

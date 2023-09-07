@@ -482,7 +482,7 @@ export default {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background: #f7f7f8;
+    background: #fff;
     height: 44px;
     font-size: 17px;
     .m-month-selector,
@@ -513,7 +513,7 @@ export default {
     display: flex;
     box-sizing: border-box;
     font-size: 11px;
-    background: #f7f7f8;
+    background: #fff;
     .m-week-day {
       flex: 1;
       text-align: center;
@@ -545,7 +545,7 @@ export default {
           &::before {
             content: '';
             position: absolute;
-            background-color: #ccc;
+            // background-color: #ccc;
             display: block;
             right: 0;
             bottom: 0;
@@ -573,18 +573,18 @@ export default {
               color: #b8b8b8;
             }
             .m-today {
-              background: #e3e3e3;
+              background: #FFE4E1;
             }
             .m-disable {
               color: #b8b8b8;
               text-decoration: line-through;
             }
             .m-select {
-              background: #007aff;
+              background: #FF6363;
               color: #fff;
             }
             .m-during{
-              background: #007aff;
+              background: #FF6363;
               color: #fff;
               width: 100%;
               height: 100%;

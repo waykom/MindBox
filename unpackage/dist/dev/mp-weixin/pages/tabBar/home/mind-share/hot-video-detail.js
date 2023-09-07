@@ -101,7 +101,7 @@ var components
 try {
   components = {
     reviewContainer: function () {
-      return __webpack_require__.e(/*! import() | components/review-container/review-container */ "components/review-container/review-container").then(__webpack_require__.bind(null, /*! @/components/review-container/review-container.vue */ 298))
+      return __webpack_require__.e(/*! import() | components/review-container/review-container */ "components/review-container/review-container").then(__webpack_require__.bind(null, /*! @/components/review-container/review-container.vue */ 396))
     },
   }
 } catch (e) {

@@ -22,7 +22,7 @@
 							<video 
 								class="main-video"
 								:enable-progress-gesture="false"
-								src="https://qiniu-web-assets.dcloud.net.cn/unidoc/zh/2minute-demo.mp4"
+								src="https://www.mindboxchat.com/appimg/home.mp4"
 								></video>
 						</view>
 					</swiper-item>
